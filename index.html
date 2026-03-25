@@ -4,33 +4,148 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PKBM Digital Blog</title>
+<title>PKBM Digital Blog | Belajar Paket C & Pendidikan Nonformal</title>
+<meta name="description" content="Portal PKBM Digital berisi artikel Paket C, pendidikan nonformal, tips belajar, dan info terbaru untuk siswa dan tutor.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {font-family:Inter;margin:0;background:#f8fafc}
-.container {max-width:1200px;margin:auto;padding:20px}
-.grid {display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+:root{
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --text:#1e293b;
+    --primary:#2563eb;
+}
 
-.card {background:#fff;border-radius:12px;overflow:hidden;border:1px solid #ddd}
-.card img {width:100%;height:180px;object-fit:cover}
-.card-content {padding:15px}
-.btn {color:#2563eb;text-decoration:none;font-weight:bold}
+.dark{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#f1f5f9;
+}
 
-.skeleton {height:250px;background:#eee;border-radius:10px}
+body{
+    font-family:Inter;
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+}
 
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+h1{
+    margin:0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid #e2e8f0;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.btn{
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:bold;
+}
+
+input{
+    padding:10px;
+    width:100%;
+    margin:20px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+.toggle{
+    cursor:pointer;
+    padding:8px 12px;
+    border-radius:8px;
+    border:none;
+    background:var(--primary);
+    color:#fff;
+}
+
+.skeleton{
+    height:250px;
+    border-radius:12px;
+    background:linear-gradient(90deg,#eee,#ddd,#eee);
+    animation:loading 1.5s infinite;
+}
+
+@keyframes loading{
+    0%{background-position:-200px}
+    100%{background-position:200px}
+}
+
+.empty{
+    text-align:center;
+    padding:40px;
+    opacity:.6;
+}
+
+.load-more{
+    display:block;
+    margin:30px auto;
+    padding:10px 20px;
+    border:none;
+    background:var(--primary);
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-<h1>PKBM Digital</h1>
 
-<input type="text" id="search" placeholder="Cari artikel..." style="padding:10px;width:100%;margin-bottom:20px">
+<div class="header">
+<h1>PKBM Digital</h1>
+<button class="toggle" onclick="toggleDark()">🌙 Mode</button>
+</div>
+
+<input type="text" id="search" placeholder="Cari artikel...">
 
 <div id="grid" class="grid"></div>
+
+<button id="loadMore" class="load-more" style="display:none;">Muat Lebih Banyak</button>
+
 </div>
 
 <script>
@@ -39,35 +154,51 @@ const REPO = 'pkbm-blog';
 const PATH = 'artikel';
 
 let allArticles = [];
+let visibleCount = 6;
 
-// placeholder kalau gambar tidak ada
 const PLACEHOLDER = "https://via.placeholder.com/400x200?text=PKBM+Digital";
+
+// helper capitalize
+function formatTitle(slug){
+    return slug.replace(/-/g,' ')
+               .replace(/\b\w/g, l => l.toUpperCase());
+}
 
 async function loadArticles(){
     const grid = document.getElementById('grid');
 
-    // loading
     grid.innerHTML = Array(6).fill('<div class="skeleton"></div>').join('');
 
-    try {
+    try{
         const res = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${PATH}`);
         const data = await res.json();
 
         allArticles = data.filter(f => f.name.endsWith('.html'));
-        renderArticles(allArticles);
 
-    } catch (err){
-        grid.innerHTML = "<p>Gagal memuat artikel</p>";
+        renderArticles();
+
+    }catch(err){
+        grid.innerHTML = "<p>Gagal memuat artikel 😢</p>";
     }
 }
 
-function renderArticles(list){
+function renderArticles(){
     const grid = document.getElementById('grid');
+    const loadMoreBtn = document.getElementById('loadMore');
+
     grid.innerHTML = '';
 
-    list.forEach(file => {
+    const visible = allArticles.slice(0, visibleCount);
+
+    if(visible.length === 0){
+        grid.innerHTML = `<div class="empty">Artikel tidak ditemukan</div>`;
+        loadMoreBtn.style.display = 'none';
+        return;
+    }
+
+    visible.forEach(file => {
         const slug = file.name.replace('.html','');
-        const title = slug.replace(/-/g,' ');
+        const title = formatTitle(slug);
 
         const img = `https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${PATH}/${slug}.jpg`;
 
@@ -77,20 +208,38 @@ function renderArticles(list){
             onerror="this.src='${PLACEHOLDER}'">
             <div class="card-content">
                 <h3>${title}</h3>
-                <p>Pelajari ${title} secara lengkap.</p>
+                <p>Pelajari ${title} secara lengkap dan mudah dipahami.</p>
                 <a class="btn" href="${PATH}/${file.name}">Baca →</a>
             </div>
-        </div>
-        `;
+        </div>`;
     });
+
+    loadMoreBtn.style.display = visibleCount < allArticles.length ? 'block' : 'none';
 }
 
-// search
+// load more
+document.getElementById('loadMore').onclick = () => {
+    visibleCount += 6;
+    renderArticles();
+};
+
+// debounce search
+let timeout;
 document.getElementById('search').addEventListener('input', function(){
-    const keyword = this.value.toLowerCase();
-    const filtered = allArticles.filter(a => a.name.toLowerCase().includes(keyword));
-    renderArticles(filtered);
+    clearTimeout(timeout);
+    timeout = setTimeout(()=>{
+        const keyword = this.value.toLowerCase();
+
+        allArticles = allArticles.filter(a => a.name.toLowerCase().includes(keyword));
+        visibleCount = 6;
+        renderArticles();
+    },300);
 });
+
+// dark mode
+function toggleDark(){
+    document.body.classList.toggle('dark');
+}
 
 window.onload = loadArticles;
 </script>
