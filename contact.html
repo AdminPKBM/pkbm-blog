@@ -1,87 +1,278 @@
-<p>Tambahkan text pembuka untuk formulir kontak versi anda sendiri disini</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Populer Topik</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<br/>
-<br/>
+    <style>
+        /* ================= VARIABEL & BASE ================= */
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --glass: rgba(255, 255, 255, 0.85);
+            --input-bg: #ffffff;
+        }
 
-<!-- Contact Form by wiBlogger.com -->
-<style type='text/css'>
-  .contact-form-field{margin-bottom:20px;}
-  .contact-form-field-message{margin-bottom:0;}
-  .contact-form input,
-  .contact-form textarea{border:1px solid #e0e0e0;border-radius:3px;}
-  .contact-form-label{margin:0 0 10px 0;}
-  .contact-form-label span{color:red;}
-  #ContactForm1_contact-form-name,
-  #ContactForm1_contact-form-email {
-    width: 300px;
-    height: 20px;
-    max-width: 95.5%;
-    padding: 2%;
-  }
-  #ContactForm1_contact-form-email-message {
-    width: 93.5%;
-    height: 150px;
-    padding: 3%;
-    resize: none;
-  }
-  #ContactForm1_contact-form-submit {
-    border:none;
-    padding:10px 30px;
-    font-size:20px;
-    background:#3bbd1b;
-    color:#fff;
-    margin-top:20px;
-    border-radius:3px;
-    width:auto;
-    font-size:15px;
-    font-family:inherit;
-  }
-  #ContactForm1_contact-form-error-message {
-    text-align:center;
-    padding:0px 20px;
-    margin-top:15px;
-    color:#D41C1C;
-  }
-  #ContactForm1_contact-form-error-message img {
-    display:none;
-  }
-</style>
+        .dark {
+            --bg: #020617;
+            --card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --glass: rgba(30, 41, 59, 0.85);
+            --input-bg: #0f172a;
+        }
 
-<div class='widget contact-form ContactForm' data-version='2' id='ContactForm1'>
-  <div class='contact-form-widget'>
-    <div class='form'>
-      <form name='contact-form'>
-        <div class='contact-form-field contact-form-field-name'>
-          <div class='contact-form-label'>
-            Nama
-          </div>
-          <div class='contact-form-input'>
-            <input class='contact-form-name' id='ContactForm1_contact-form-name' name='name' size='30' type='text' value=''/>
-          </div>
+        * { box-sizing: border-box; transition: background 0.3s, border 0.3s, color 0.3s; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* ================= HEADER ================= */
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border); padding: 1rem 0;
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo {
+            font-size: 1.5rem; font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        .header-actions { display: flex; align-items: center; gap: 1rem; }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0; }
+        .toggle-mode {
+            background: var(--border); border: none; padding: 0.5rem 1rem;
+            border-radius: 50px; cursor: pointer; font-weight: 600;
+            color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;
+        }
+
+        /* ================= STYLING HALAMAN & FORM ================= */
+        .page-wrapper {
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+        .card {
+            background: var(--card); border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--border); padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        
+        .page-content h1 { font-size: 2.2rem; color: var(--text-main); margin-top: 0; margin-bottom: 1rem; }
+        .page-content p { color: var(--text-main); font-size: 1.05rem; margin-bottom: 2rem; }
+
+        /* Form Custom CSS */
+        .contact-form-field { margin-bottom: 1.5rem; }
+        .contact-form-label { font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main); display: block; }
+        .contact-form-label span { color: #ef4444; } /* Bintang merah untuk wajib diisi */
+        
+        .contact-form input[type="text"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--input-bg);
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form-button-submit {
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+            margin-top: 1rem;
+            font-family: inherit;
+        }
+
+        .contact-form-button-submit:hover { background: var(--primary-hover); }
+
+        .contact-form-error-message { color: #ef4444; font-weight: 500; text-align: center; margin-top: 1rem; }
+        .contact-form-success-message { color: #10b981; font-weight: 500; text-align: center; margin-top: 1rem; }
+        
+        /* Menyembunyikan elemen gambar default dari Blogger widget */
+        #ContactForm1_contact-form-error-message img { display: none !important; }
+
+        /* ================= FOOTER ================= */
+        footer { background: var(--card); border-top: 1px solid var(--border); padding: 3rem 0; margin-top: 4rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { margin-top: 0; color: var(--text-main); }
+        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .mobile-toggle { display: block; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--card); flex-direction: column; padding: 1rem;
+                border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .card { padding: 1.5rem; }
+            .page-content h1 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">Populer Topik</a>
+        <nav class="nav-links" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="contact.html">Kontak</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+        <div class="header-actions">
+            <button class="toggle-mode" onclick="toggleDark()" aria-label="Ganti Tema">
+                <span id="mode-icon">🌙</span> <span id="mode-text">Gelap</span>
+            </button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Buka Menu">☰</button>
         </div>
-
-        <div class='contact-form-field contact-form-field-email'>
-          <div class='contact-form-label'>
-            E-mail <span>*</span>
-          </div>
-          <div class='contact-form-input'>
-            <input placeholder="Email balasan akan dikirim ke sini" class='contact-form-email' id='ContactForm1_contact-form-email' name='email' size='30' type='text' value=''/>
-          </div>
-        </div>
-
-        <div class='contact-form-field contact-form-field-message'>
-          <div class='contact-form-label'>
-            Pesan <span>*</span>
-          </div>
-          <div class='contact-form-input'>
-            <textarea class='contact-form-email-message' cols='25' id='ContactForm1_contact-form-email-message' name='email-message' rows='5'></textarea>
-            <input class='contact-form-button contact-form-button-submit' id='ContactForm1_contact-form-submit' type='button' value='Kirim Pesan'/>
-          </div>
-        </div>
-
-        <p class='contact-form-error-message' id='ContactForm1_contact-form-error-message'></p>
-        <p class='contact-form-success-message' id='ContactForm1_contact-form-success-message'></p>
-      </form>
     </div>
-  </div>
-</div>
+</header>
+
+<main class="container page-wrapper">
+    <article class="card page-content">
+        
+        <h1>Hubungi Kami</h1>
+        
+        <p>Apakah Anda memiliki pertanyaan, saran, kerja sama, atau masukan terkait artikel kami? Jangan ragu untuk menghubungi tim <strong>Populer Topik</strong>. Silakan isi formulir di bawah ini dengan lengkap, dan kami akan berusaha merespons pesan Anda secepatnya.</p>
+
+        <div class='widget contact-form ContactForm' data-version='2' id='ContactForm1'>
+            <div class='contact-form-widget'>
+                <div class='form'>
+                    <form name='contact-form'>
+                        <div class='contact-form-field contact-form-field-name'>
+                            <div class='contact-form-label'>Nama Lengkap</div>
+                            <div class='contact-form-input'>
+                                <input class='contact-form-name' id='ContactForm1_contact-form-name' name='name' type='text' value='' placeholder='Masukkan nama Anda'/>
+                            </div>
+                        </div>
+
+                        <div class='contact-form-field contact-form-field-email'>
+                            <div class='contact-form-label'>Alamat E-mail <span>*</span></div>
+                            <div class='contact-form-input'>
+                                <input class='contact-form-email' id='ContactForm1_contact-form-email' name='email' type='text' value='' placeholder='Email balasan akan dikirim ke sini'/>
+                            </div>
+                        </div>
+
+                        <div class='contact-form-field contact-form-field-message'>
+                            <div class='contact-form-label'>Pesan Anda <span>*</span></div>
+                            <div class='contact-form-input'>
+                                <textarea class='contact-form-email-message' id='ContactForm1_contact-form-email-message' name='email-message' placeholder='Tuliskan pesan Anda di sini...'></textarea>
+                            </div>
+                            <input class='contact-form-button contact-form-button-submit' id='ContactForm1_contact-form-submit' type='button' value='Kirim Pesan'/>
+                        </div>
+
+                        <p class='contact-form-error-message' id='ContactForm1_contact-form-error-message'></p>
+                        <p class='contact-form-success-message' id='ContactForm1_contact-form-success-message'></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Tentang Populer Topik</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Menyajikan informasi terupdate dan terpercaya untuk pengunjung kami. Didesain untuk memberikan pengalaman membaca terbaik.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="contact.html">Hubungi Kami</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Kebijakan</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Populer Topik. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleDark() {
+        const isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeUI(isDark);
+    }
+
+    function updateThemeUI(isDark) {
+        document.getElementById('mode-icon').innerText = isDark ? '☀️' : '🌙';
+        document.getElementById('mode-text').innerText = isDark ? 'Terang' : 'Gelap';
+    }
+
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+
+    window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark');
+            updateThemeUI(true);
+        }
+    };
+</script>
+
+</body>
+</html>
