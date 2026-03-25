@@ -1,1 +1,207 @@
-<p><b>Tentang Blog Topik Populer</b></p><p>Selamat datang di Blog Topik Populer! Kami adalah sumber informasi terkini dan terpercaya mengenai berbagai topik yang sedang populer dan relevan bagi kehidupan sehari-hari. Di sini, kami mengulas secara mendalam topik-topik seperti keuangan, asuransi, kesehatan, teknologi, dan hobi yang meliputi:</p><p></p><ul style="text-align: left;"><li>Keuangan: Mulai dari strategi pinjaman hingga investasi cerdas, kami membahas cara-cara untuk mengelola keuangan pribadi dengan bijak dan merencanakan masa depan finansial Anda.</li><li>Asuransi: Menyediakan panduan lengkap tentang jenis-jenis asuransi yang tersedia, manfaatnya, serta cara memilih asuransi yang sesuai dengan kebutuhan Anda untuk melindungi diri dan keluarga.</li><li>Kesehatan: Fokus pada penyakit kronis seperti diabetes, hipertensi, dan kanker, kami menyajikan informasi tentang pengobatan terkini, pencegahan, dan upaya untuk hidup sehat.</li><li>Teknologi: Mengulas tentang gadget terbaru di pasaran, review mendalam mengenai fitur-fitur terkini, serta tren teknologi yang sedang berkembang di dunia digital.</li><li>Hobi: Memperkenalkan hobi-hobi yang mengasyikkan dan sering kali melibatkan produk-produk mahal atau layanan eksklusif, kami menyediakan inspirasi dan panduan untuk mengeksplorasi passion Anda dengan lebih dalam.</li></ul><p></p><p>Tujuan kami adalah untuk memberikan wawasan yang bermanfaat, tips praktis, dan panduan yang dapat diandalkan agar Anda dapat membuat keputusan yang tepat dalam kehidupan sehari-hari Anda. Bergabunglah dengan kami dalam menjelajahi dan mengapresiasi berbagai topik yang memengaruhi cara kita hidup dan berinteraksi dengan dunia modern ini.</p><p>Terima kasih telah bergabung dengan kami di Blog Topik Populer. Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau ingin berbagi pandangan. Selamat membaca!</p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Populer Topik</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= VARIABEL & BASE ================= */
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --glass: rgba(255, 255, 255, 0.85);
+        }
+
+        .dark {
+            --bg: #020617;
+            --card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --glass: rgba(30, 41, 59, 0.85);
+        }
+
+        * { box-sizing: border-box; transition: background 0.3s, border 0.3s, color 0.3s; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* ================= HEADER ================= */
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border); padding: 1rem 0;
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo {
+            font-size: 1.5rem; font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        .header-actions { display: flex; align-items: center; gap: 1rem; }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0; }
+        .toggle-mode {
+            background: var(--border); border: none; padding: 0.5rem 1rem;
+            border-radius: 50px; cursor: pointer; font-weight: 600;
+            color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;
+        }
+
+        /* ================= STYLING HALAMAN TEKS ================= */
+        .page-wrapper {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+        .card {
+            background: var(--card); border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--border); padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        
+        .page-content h1 { font-size: 2.2rem; color: var(--text-main); margin-top: 0; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem;}
+        .page-content p { color: var(--text-main); font-size: 1.05rem; margin-bottom: 1.2rem; }
+        .page-content ul { color: var(--text-main); margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.05rem; }
+        .page-content li { margin-bottom: 0.8rem; }
+        .page-content a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .page-content a:hover { text-decoration: underline; }
+
+        /* ================= FOOTER ================= */
+        footer { background: var(--card); border-top: 1px solid var(--border); padding: 3rem 0; margin-top: 4rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { margin-top: 0; color: var(--text-main); }
+        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .mobile-toggle { display: block; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--card); flex-direction: column; padding: 1rem;
+                border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .card { padding: 1.5rem; }
+            .page-content h1 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">Populer Topik</a>
+        <nav class="nav-links" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="contact.html">Kontak</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+        <div class="header-actions">
+            <button class="toggle-mode" onclick="toggleDark()" aria-label="Ganti Tema">
+                <span id="mode-icon">🌙</span> <span id="mode-text">Gelap</span>
+            </button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Buka Menu">☰</button>
+        </div>
+    </div>
+</header>
+
+<main class="container page-wrapper">
+    <article class="card page-content">
+        
+        <h1>Tentang Kami</h1>
+
+        <p>Selamat datang di <strong>Blog Topik Populer</strong>! Kami adalah sumber informasi terkini dan terpercaya mengenai berbagai topik yang sedang populer dan relevan bagi kehidupan sehari-hari. Di sini, kami mengulas secara mendalam topik-topik krusial yang meliputi:</p>
+
+        <ul>
+            <li><strong>Keuangan:</strong> Mulai dari strategi pinjaman hingga investasi cerdas, kami membahas cara-cara untuk mengelola keuangan pribadi dengan bijak dan merencanakan masa depan finansial Anda.</li>
+            <li><strong>Asuransi:</strong> Menyediakan panduan lengkap tentang jenis-jenis asuransi yang tersedia, manfaatnya, serta cara memilih asuransi yang sesuai dengan kebutuhan Anda untuk melindungi diri dan keluarga.</li>
+            <li><strong>Kesehatan:</strong> Fokus pada penyakit kronis seperti diabetes, hipertensi, dan kanker, kami menyajikan informasi tentang pengobatan terkini, pencegahan, dan upaya untuk hidup sehat.</li>
+            <li><strong>Teknologi:</strong> Mengulas tentang gadget terbaru di pasaran, review mendalam mengenai fitur-fitur terkini, serta tren teknologi yang sedang berkembang di dunia digital.</li>
+            <li><strong>Hobi:</strong> Memperkenalkan hobi-hobi yang mengasyikkan dan sering kali melibatkan produk-produk mahal atau layanan eksklusif, kami menyediakan inspirasi dan panduan untuk mengeksplorasi passion Anda dengan lebih dalam.</li>
+        </ul>
+
+        <p>Tujuan kami adalah memberikan wawasan yang bermanfaat, tips praktis, dan panduan yang dapat diandalkan agar Anda dapat membuat keputusan yang tepat dalam kehidupan sehari-hari Anda. Bergabunglah dengan kami dalam menjelajahi dan mengapresiasi berbagai topik yang memengaruhi cara kita hidup dan berinteraksi dengan dunia modern ini.</p>
+
+        <p>Terima kasih telah bergabung bersama kami di Blog Topik Populer. Jangan ragu untuk <a href="contact.html">menghubungi kami</a> jika Anda memiliki pertanyaan atau ingin berbagi pandangan. Selamat membaca!</p>
+
+    </article>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Tentang Populer Topik</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Menyajikan informasi terupdate dan terpercaya untuk pengunjung kami. Didesain untuk memberikan pengalaman membaca terbaik.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="contact.html">Hubungi Kami</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Kebijakan</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Populer Topik. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleDark() {
+        const isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeUI(isDark);
+    }
+
+    function updateThemeUI(isDark) {
+        document.getElementById('mode-icon').innerText = isDark ? '☀️' : '🌙';
+        document.getElementById('mode-text').innerText = isDark ? 'Terang' : 'Gelap';
+    }
+
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+
+    // Cek tema yang tersimpan saat halaman dimuat
+    window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark');
+            updateThemeUI(true);
+        }
+    };
+</script>
+
+</body>
+</html>
