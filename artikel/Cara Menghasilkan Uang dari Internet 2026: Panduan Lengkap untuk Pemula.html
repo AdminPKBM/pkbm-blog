@@ -1,223 +1,357 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Panduan lengkap cara menghasilkan uang dari internet 2026. Pelajari blogging, YouTube, freelance, dan strategi realistis untuk pemula tanpa modal besar.">
-<meta name="keywords" content="cara menghasilkan uang dari internet, bisnis online 2026, blogging, youtube, freelance pemula, kerja online dari rumah">
-<title>Cara Menghasilkan Uang dari Internet 2026: Panduan Lengkap untuk Pemula</title>
-<link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panduan lengkap cara menghasilkan uang dari internet 2026. Pelajari blogging, YouTube, freelance, dan strategi realistis untuk pemula tanpa modal besar.">
+    <meta name="keywords" content="cara menghasilkan uang dari internet, bisnis online 2026, blogging, youtube, freelance pemula, kerja online dari rumah">
+    <title>Cara Menghasilkan Uang dari Internet 2026: Panduan Lengkap untuk Pemula</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= VARIABEL & BASE ================= */
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --glass: rgba(255, 255, 255, 0.85);
+        }
+
+        .dark {
+            --bg: #020617;
+            --card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --glass: rgba(30, 41, 59, 0.85);
+        }
+
+        * { box-sizing: border-box; transition: background 0.3s, border 0.3s, color 0.3s; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* ================= HEADER ================= */
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border); padding: 1rem 0;
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo {
+            font-size: 1.5rem; font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        .header-actions { display: flex; align-items: center; gap: 1rem; }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0; }
+        .toggle-mode {
+            background: var(--border); border: none; padding: 0.5rem 1rem;
+            border-radius: 50px; cursor: pointer; font-weight: 600;
+            color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;
+        }
+
+        /* ================= STYLING KHUSUS ARTIKEL ================= */
+        .article-wrapper {
+            max-width: 800px; /* Lebar ideal untuk membaca */
+            margin: 3rem auto;
+        }
+        .card {
+            background: var(--card); border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--border); padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        
+        /* Tipografi Artikel */
+        .article-content h1 { font-size: 2.2rem; color: var(--text-main); line-height: 1.3; margin-top: 0; margin-bottom: 1rem; }
+        .article-content h2 { font-size: 1.6rem; color: var(--text-main); margin-top: 2.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .article-content h3 { font-size: 1.3rem; color: var(--text-main); margin-top: 2rem; }
+        .article-content p { color: var(--text-main); font-size: 1.05rem; margin-bottom: 1.5rem; }
+        .article-content ul, .article-content ol { color: var(--text-main); margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.05rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+        .article-content a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .article-content a:hover { text-decoration: underline; }
+        .article-content hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+        
+        /* Meta & Gambar */
+        .article-meta {
+            display: flex; align-items: center; gap: 1rem;
+            color: var(--text-muted); font-size: 0.9rem;
+            margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);
+        }
+        .article-content figure { margin: 2rem 0; text-align: center; }
+        .article-content img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
+        .article-content figcaption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; font-style: italic; }
+
+        /* ================= FOOTER ================= */
+        footer { background: var(--card); border-top: 1px solid var(--border); padding: 3rem 0; margin-top: 4rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { margin-top: 0; color: var(--text-main); }
+        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .mobile-toggle { display: block; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--card); flex-direction: column; padding: 1rem;
+                border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .card { padding: 1.5rem; }
+            .article-content h1 { font-size: 1.7rem; }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-<div class="logo">PKBM DIGITAL</div>
-<ul>
-<li><a href="../index.html">Home</a></li>
-<li><a href="../about.html">Tentang</a></li>
-<li><a href="../contact.html">Kontak</a></li>
-</ul>
-</nav>
+<header>
+    <div class="container nav-wrapper">
+        <a href="../index.html" class="logo">PKBM Digital</a>
+        <nav class="nav-links" id="nav-menu">
+            <a href="../index.html">Beranda</a>
+            <a href="../tentang-kami.html">Tentang Kami</a>
+            <a href="../kontak.html">Kontak</a>
+            <a href="../kebijakan-privasi.html">Privacy Policy</a>
+            <a href="../disclaimer.html">Disclaimer</a>
+        </nav>
+        <div class="header-actions">
+            <button class="toggle-mode" onclick="toggleDark()" aria-label="Ganti Tema">
+                <span id="mode-icon">🌙</span> <span id="mode-text">Gelap</span>
+            </button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Buka Menu">☰</button>
+        </div>
+    </div>
+</header>
 
-<main class="container">
-<article class="card" style="margin-top:20px; padding:40px;">
+<main class="container article-wrapper">
+    <article class="card article-content">
+        
+        <h1>Cara Menghasilkan Uang dari Internet 2026: Panduan Lengkap dari Nol hingga Cuan</h1>
+        
+        <div class="article-meta">
+            <span>✍️ Ditulis oleh: Spesialis Finansial Digital</span>
+            <span>📅 Update: 25 Maret 2026</span>
+        </div>
 
-<h1>Cara Menghasilkan Uang dari Internet 2026: Panduan Lengkap dari Nol hingga Cuan</h1>
+        <figure>
+            <img src="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Cara%20Menghasilkan%20Uang%20dari%20Internet%20Blogging%2C%20YouTube%20%26%20Freelance.png" 
+                 alt="Cara Menghasilkan Uang dari Internet"
+                 onerror="this.src='https://placehold.co/800x450/2563eb/ffffff.png?text=Ilustrasi+Artikel'">
+            <figcaption>Peluang menghasilkan uang dari internet untuk pemula</figcaption>
+        </figure>
 
-<figure style="text-align:center; margin:20px 0;">
-<img src="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Cara%20Menghasilkan%20Uang%20dari%20Internet%20Blogging%2C%20YouTube%20%26%20Freelance.png" 
-alt="Cara Menghasilkan Uang dari Internet"
-style="width:100%; max-width:800px; border-radius:10px;">
-<figcaption style="font-size:0.9rem; color:#7f8c8d;">
-Peluang menghasilkan uang dari internet untuk pemula
-</figcaption>
-</figure>
+        <p><strong>Cara menghasilkan uang dari internet</strong> di tahun 2026 semakin mudah diakses oleh siapa saja. Bahkan tanpa modal besar, Anda sudah bisa memulai hanya dengan HP dan koneksi internet.</p>
 
-<p style="color:#7f8c8d;"><i>Ditulis oleh: Spesialis Finansial Digital | Update: 25 Maret 2026</i></p>
+        <p>Artikel ini adalah <strong>panduan lengkap (pillar content)</strong> yang akan membantu Anda memahami berbagai cara menghasilkan uang online, strategi sukses, hingga roadmap nyata untuk pemula.</p>
 
-<hr>
+        <hr>
 
-<p><strong>Cara menghasilkan uang dari internet</strong> di tahun 2026 semakin mudah diakses oleh siapa saja. Bahkan tanpa modal besar, Anda sudah bisa memulai hanya dengan HP dan koneksi internet.</p>
+        <h2 id="daftar-isi">📌 Daftar Isi</h2>
+        <ul>
+            <li><a href="#peluang">Mengapa Internet Jadi Ladang Uang?</a></li>
+            <li><a href="#metode">3 Metode Utama</a></li>
+            <li><a href="#strategi">Strategi Memulai dari Nol</a></li>
+            <li><a href="#penghasilan">Potensi Penghasilan</a></li>
+            <li><a href="#roadmap">Roadmap 30 Hari</a></li>
+            <li><a href="#kesalahan">Kesalahan Pemula</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
 
-<p>Artikel ini adalah <strong>panduan lengkap (pillar content)</strong> yang akan membantu Anda memahami berbagai cara menghasilkan uang online, strategi sukses, hingga roadmap nyata untuk pemula.</p>
+        <hr>
 
-<hr>
+        <h2 id="peluang">🌐 Mengapa Internet Jadi Sumber Penghasilan?</h2>
+        <ul>
+            <li>Bisa dikerjakan dari rumah</li>
+            <li>Tidak butuh modal besar</li>
+            <li>Jangkauan global</li>
+            <li>Penghasilan tidak terbatas</li>
+        </ul>
+        <p>Internet mengubah cara orang bekerja—dari sistem fisik menjadi digital.</p>
 
-<h2>📌 Daftar Isi</h2>
-<ul>
-<li><a href="#peluang">Mengapa Internet Jadi Ladang Uang?</a></li>
-<li><a href="#metode">3 Metode Utama</a></li>
-<li><a href="#strategi">Strategi Memulai dari Nol</a></li>
-<li><a href="#penghasilan">Potensi Penghasilan</a></li>
-<li><a href="#roadmap">Roadmap 30 Hari</a></li>
-<li><a href="#kesalahan">Kesalahan Pemula</a></li>
-<li><a href="#faq">FAQ</a></li>
-</ul>
+        <h2 id="metode">🔥 3 Cara Utama Menghasilkan Uang dari Internet</h2>
 
-<hr>
+        <h3>1. Blogging (Aset Digital Jangka Panjang)</h3>
+        <p>Blogging adalah cara paling stabil untuk membangun penghasilan pasif.</p>
+        <p><strong>Sumber penghasilan:</strong></p>
+        <ul>
+            <li>Google AdSense</li>
+            <li>Affiliate marketing</li>
+            <li>Sponsored post</li>
+        </ul>
+        <p><strong>Tips sukses:</strong></p>
+        <ul>
+            <li>Pilih niche spesifik</li>
+            <li>Tulis artikel SEO</li>
+            <li>Konsisten publish</li>
+        </ul>
 
-<h2 id="peluang">🌐 Mengapa Internet Jadi Sumber Penghasilan?</h2>
+        <h3>2. YouTube (Penghasilan dari Video)</h3>
+        <p>YouTube memberikan peluang besar melalui konten video.</p>
+        <p><strong>Cara menghasilkan:</strong></p>
+        <ul>
+            <li>Iklan AdSense</li>
+            <li>Endorsement</li>
+            <li>Affiliate</li>
+        </ul>
+        <p><strong>Strategi pemula:</strong></p>
+        <ul>
+            <li>Gunakan HP</li>
+            <li>Upload rutin</li>
+            <li>Manfaatkan Shorts</li>
+        </ul>
 
-<ul>
-<li>Bisa dikerjakan dari rumah</li>
-<li>Tidak butuh modal besar</li>
-<li>Jangkauan global</li>
-<li>Penghasilan tidak terbatas</li>
-</ul>
+        <h3>3. Freelance (Uang Cepat dari Skill)</h3>
+        <p>Freelance adalah cara tercepat menghasilkan uang.</p>
+        <p><strong>Skill yang laku:</strong></p>
+        <ul>
+            <li>Menulis</li>
+            <li>Desain</li>
+            <li>Editing video</li>
+            <li>Admin sosial media</li>
+        </ul>
+        <p><strong>Platform:</strong></p>
+        <ul>
+            <li>Sribulancer</li>
+            <li>Projects.co.id</li>
+            <li>Upwork</li>
+        </ul>
 
-<p>Internet mengubah cara orang bekerja—dari sistem fisik menjadi digital.</p>
+        <h2 id="strategi">🎯 Strategi Memulai dari Nol</h2>
+        <ol>
+            <li>Pilih satu metode (jangan semua)</li>
+            <li>Belajar dasar (3–7 hari)</li>
+            <li>Mulai praktik langsung</li>
+            <li>Buat portofolio</li>
+            <li>Promosi setiap hari</li>
+        </ol>
+        <p><strong>Rule penting:</strong> action lebih penting daripada teori.</p>
 
-<hr>
+        <h2 id="penghasilan">💰 Potensi Penghasilan</h2>
+        <ul>
+            <li>Pemula: Rp500 ribu – Rp2 juta</li>
+            <li>Menengah: Rp3 juta – Rp10 juta</li>
+            <li>Pro: Rp10 juta+</li>
+        </ul>
+        <p>Semua tergantung konsistensi dan skill.</p>
 
-<h2 id="metode">🔥 3 Cara Utama Menghasilkan Uang dari Internet</h2>
+        <h2 id="roadmap">📅 Roadmap 30 Hari</h2>
+        <p><strong>Minggu 1:</strong> belajar dasar</p>
+        <p><strong>Minggu 2:</strong> mulai posting / daftar freelance</p>
+        <p><strong>Minggu 3:</strong> cari klien / traffic</p>
+        <p><strong>Minggu 4:</strong> mulai menghasilkan</p>
 
-<h3>1. Blogging (Aset Digital Jangka Panjang)</h3>
+        <h2 id="kesalahan">❌ Kesalahan Pemula</h2>
+        <ul>
+            <li>Ingin cepat kaya</li>
+            <li>Tidak konsisten</li>
+            <li>Sering ganti fokus</li>
+            <li>Tidak belajar skill</li>
+        </ul>
+        <p><strong>Solusi:</strong> fokus 1 jalur minimal 30 hari.</p>
 
-<p>Blogging adalah cara paling stabil untuk membangun penghasilan pasif.</p>
+        <h2 id="faq">❓ FAQ</h2>
+        <h3>Apakah bisa tanpa modal?</h3>
+        <p>Bisa, cukup HP dan internet.</p>
 
-<p><strong>Sumber penghasilan:</strong></p>
-<ul>
-<li>Google AdSense</li>
-<li>Affiliate marketing</li>
-<li>Sponsored post</li>
-</ul>
+        <h3>Berapa lama bisa menghasilkan?</h3>
+        <p>1–3 bulan jika konsisten.</p>
 
-<p><strong>Tips sukses:</strong></p>
-<ul>
-<li>Pilih niche spesifik</li>
-<li>Tulis artikel SEO</li>
-<li>Konsisten publish</li>
-</ul>
+        <h3>Mana yang terbaik?</h3>
+        <p>Freelance (cepat), Blogging & YouTube (jangka panjang).</p>
 
-<hr>
+        <hr>
 
-<h3>2. YouTube (Penghasilan dari Video)</h3>
+        <h2>Kesimpulan</h2>
+        <p><strong>Menghasilkan uang dari internet bukan mimpi, tapi pilihan.</strong></p>
+        <p>Mulailah dari kecil, fokus, dan konsisten. Dalam beberapa bulan, Anda bisa mulai melihat hasil nyata.</p>
+        <p><strong>Jangan tunggu siap—mulai sekarang.</strong></p>
 
-<p>YouTube memberikan peluang besar melalui konten video.</p>
+        <hr>
 
-<p><strong>Cara menghasilkan:</strong></p>
-<ul>
-<li>Iklan AdSense</li>
-<li>Endorsement</li>
-<li>Affiliate</li>
-</ul>
+        <h3>📚 Baca Juga (Cluster SEO)</h3>
+        <ul>
+            <li><a href="#">Cara Daftar Google AdSense untuk Pemula</a></li>
+            <li><a href="#">Cara Dapat Uang dari YouTube Shorts</a></li>
+            <li><a href="#">Skill Freelance Paling Laris 2026</a></li>
+            <li><a href="#">Cara Menulis Artikel SEO yang Ranking</a></li>
+        </ul>
 
-<p><strong>Strategi pemula:</strong></p>
-<ul>
-<li>Gunakan HP</li>
-<li>Upload rutin</li>
-<li>Manfaatkan Shorts</li>
-</ul>
-
-<hr>
-
-<h3>3. Freelance (Uang Cepat dari Skill)</h3>
-
-<p>Freelance adalah cara tercepat menghasilkan uang.</p>
-
-<p><strong>Skill yang laku:</strong></p>
-<ul>
-<li>Menulis</li>
-<li>Desain</li>
-<li>Editing video</li>
-<li>Admin sosial media</li>
-</ul>
-
-<p><strong>Platform:</strong></p>
-<ul>
-<li>Sribulancer</li>
-<li>Projects.co.id</li>
-<li>Upwork</li>
-</ul>
-
-<hr>
-
-<h2 id="strategi">🎯 Strategi Memulai dari Nol</h2>
-
-<ol>
-<li>Pilih satu metode (jangan semua)</li>
-<li>Belajar dasar (3–7 hari)</li>
-<li>Mulai praktik langsung</li>
-<li>Buat portofolio</li>
-<li>Promosi setiap hari</li>
-</ol>
-
-<p><strong>Rule penting:</strong> action lebih penting daripada teori.</p>
-
-<hr>
-
-<h2 id="penghasilan">💰 Potensi Penghasilan</h2>
-
-<ul>
-<li>Pemula: Rp500 ribu – Rp2 juta</li>
-<li>Menengah: Rp3 juta – Rp10 juta</li>
-<li>Pro: Rp10 juta+</li>
-</ul>
-
-<p>Semua tergantung konsistensi dan skill.</p>
-
-<hr>
-
-<h2 id="roadmap">📅 Roadmap 30 Hari</h2>
-
-<p><strong>Minggu 1:</strong> belajar dasar</p>
-<p><strong>Minggu 2:</strong> mulai posting / daftar freelance</p>
-<p><strong>Minggu 3:</strong> cari klien / traffic</p>
-<p><strong>Minggu 4:</strong> mulai menghasilkan</p>
-
-<hr>
-
-<h2 id="kesalahan">❌ Kesalahan Pemula</h2>
-
-<ul>
-<li>Ingin cepat kaya</li>
-<li>Tidak konsisten</li>
-<li>Sering ganti fokus</li>
-<li>Tidak belajar skill</li>
-</ul>
-
-<p><strong>Solusi:</strong> fokus 1 jalur minimal 30 hari.</p>
-
-<hr>
-
-<h2 id="faq">❓ FAQ</h2>
-
-<h3>Apakah bisa tanpa modal?</h3>
-<p>Bisa, cukup HP dan internet.</p>
-
-<h3>Berapa lama bisa menghasilkan?</h3>
-<p>1–3 bulan jika konsisten.</p>
-
-<h3>Mana yang terbaik?</h3>
-<p>Freelance (cepat), Blogging & YouTube (jangka panjang).</p>
-
-<hr>
-
-<h2>Kesimpulan</h2>
-
-<p><strong>Menghasilkan uang dari internet bukan mimpi, tapi pilihan.</strong></p>
-
-<p>Mulailah dari kecil, fokus, dan konsisten. Dalam beberapa bulan, Anda bisa mulai melihat hasil nyata.</p>
-
-<p><strong>Jangan tunggu siap—mulai sekarang.</strong></p>
-
-<hr>
-
-<h3>📚 Baca Juga (Cluster SEO)</h3>
-<ul>
-<li><a href="#">Cara Daftar Google AdSense untuk Pemula</a></li>
-<li><a href="#">Cara Dapat Uang dari YouTube Shorts</a></li>
-<li><a href="#">Skill Freelance Paling Laris 2026</a></li>
-<li><a href="#">Cara Menulis Artikel SEO yang Ranking</a></li>
-</ul>
-
-</article>
+    </article>
 </main>
 
 <footer>
-<p>&copy; 2026 PKBM Digital</p>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Tentang PKBM Digital</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Portal independen yang menyediakan informasi seputar pendidikan nonformal, Kejar Paket A, B, C, serta panduan belajar mandiri untuk masyarakat Indonesia.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <a href="../index.html">Beranda</a>
+                <a href="../tentang-kami.html">Tentang Kami</a>
+                <a href="../kontak.html">Hubungi Kami</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Kebijakan</h4>
+                <a href="../kebijakan-privasi.html">Privacy Policy</a>
+                <a href="../disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PKBM Digital. Dibuat dengan dedikasi untuk pendidikan Indonesia.</p>
+        </div>
+    </div>
 </footer>
+
+<script>
+    function toggleDark() {
+        const isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeUI(isDark);
+    }
+
+    function updateThemeUI(isDark) {
+        document.getElementById('mode-icon').innerText = isDark ? '☀️' : '🌙';
+        document.getElementById('mode-text').innerText = isDark ? 'Terang' : 'Gelap';
+    }
+
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+
+    // Cek tema yang tersimpan saat halaman dimuat
+    window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark');
+            updateThemeUI(true);
+        }
+    };
+</script>
 
 </body>
 </html>
