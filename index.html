@@ -12,9 +12,10 @@
     <meta property="og:url" content="https://pkbmcelahcahaya.edu.eu.org">
     <meta property="og:title" content="PKBM Digital | Portal Pendidikan Nonformal">
     <meta property="og:description" content="Pelajari materi Paket C dan pendidikan nonformal dengan cara yang modern dan digital.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=PKBM+Digital+Portal">
+    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff.png?text=PKBM+Digital+Portal">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,7 +61,7 @@
             line-height: 1.6;
         }
 
-        /* Navigasi Standard AdSense */
+        /* Navigasi */
         header {
             position: sticky;
             top: 0;
@@ -151,6 +152,26 @@
         }
         input#search:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); }
 
+        /* Container Iklan */
+        .ad-container {
+            text-align: center;
+            margin: 2rem auto;
+            padding: 1rem 0;
+            max-width: 100%;
+            overflow: hidden;
+            background: var(--card);
+            border: 1px dashed var(--border);
+            border-radius: 10px;
+        }
+        .ad-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         /* Grid & Cards */
         .grid {
             display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -201,7 +222,7 @@
         @media (max-width: 768px) {
             .mobile-toggle { display: block; }
             .nav-links {
-                display: none; /* Sembunyikan default di mobile */
+                display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -242,6 +263,20 @@
 </header>
 
 <main class="container">
+
+    <div class="ad-container">
+        <span class="ad-label">- Advertisement -</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4454451699877502"
+             data-ad-slot="GANTI_DENGAN_SLOT_ANDA"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <section class="hero-section">
         <h1>Wawasan Pendidikan Nonformal</h1>
         <p style="color: var(--text-muted)">Temukan artikel, panduan, dan tips seputar pendidikan kesetaraan.</p>
@@ -250,6 +285,19 @@
             <input type="text" id="search" placeholder="Cari topik belajar (contoh: Ujian Paket C)..." aria-label="Cari artikel">
         </div>
     </section>
+
+    <div class="ad-container">
+        <span class="ad-label">- Advertisement -</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4454451699877502"
+             data-ad-slot="GANTI_DENGAN_SLOT_ANDA"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <div id="grid" class="grid">
         <div class="skeleton"></div>
@@ -260,6 +308,20 @@
     <div class="load-more-container">
         <button id="loadMore" class="btn-primary" style="display:none;">Muat Lebih Banyak</button>
     </div>
+
+    <div class="ad-container">
+        <span class="ad-label">- Advertisement -</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4454451699877502"
+             data-ad-slot="GANTI_DENGAN_SLOT_ANDA"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
 </main>
 
 <footer>
@@ -279,7 +341,7 @@
                 <h4>Legal & Kebijakan</h4>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="disclaimer.html">Disclaimer</a>
-                  <a href="sitemap.xml">Sitemap</a>
+                <a href="sitemap.xml">Sitemap</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -294,17 +356,15 @@
         repo: 'pkbm-blog',
         path: 'artikel',     // Folder tempat file .html berada
         imgPath: 'img',      // Folder tempat gambar .png berada
-        placeholder: "https://placehold.co/600x400/2563eb/ffffff/png?text=PKBM+Digital"
+        // Perbaikan ekstensi .png pada URL placeholder agar browser langsung membaca ini sebagai gambar
+        placeholder: "https://placehold.co/600x400/2563eb/ffffff.png?text=PKBM+Digital"
     };
 
     let articlesData = []; 
     let filteredData = []; 
     let visibleCount = 6;
 
-    // Karena nama file Anda sudah rapi (menggunakan spasi & huruf kapital), 
-    // kita sederhanakan fungsi ini agar judul tidak rusak.
     function formatTitle(slug) {
-        // Hapus ekstensi .html saja, biarkan spasi dan huruf kapital aslinya
         return slug; 
     }
 
@@ -346,8 +406,8 @@
             const slug = file.name.replace('.html', '');
             const title = formatTitle(slug);
             
-            // PERBAIKAN: Arahkan ke folder img dan amankan spasi menggunakan encodeURIComponent
-            const safeSlug = encodeURIComponent(slug);
+            // PERBAIKAN: Menggunakan encodeURI agar spasi dan karakter khusus aman tanpa merusak struktur URL
+            const safeSlug = encodeURI(slug);
             const imgUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repo}/main/${CONFIG.imgPath}/${safeSlug}.png`;
 
             const card = document.createElement('article');
