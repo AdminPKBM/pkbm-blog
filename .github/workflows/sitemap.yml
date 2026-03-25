@@ -1,0 +1,33 @@
+name: Generate Sitemap Otomatis
+
+# Robot ini akan berjalan setiap kali Anda melakukan Push/Upload file baru ke branch 'main'
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 
+
+    - name: Generate the sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://pkbmcelahcahaya.edu.eu.org/
+        # Mengabaikan folder tertentu (jika perlu)
+        drop-html-extension: true
+
+    - name: Commit dan Push Sitemap
+      run: |
+        if [[ `git status --porcelain sitemap.xml` ]]; then
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add sitemap.xml
+          git commit -m "Robot: Update sitemap.xml otomatis"
+          git push
+        fi
