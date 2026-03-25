@@ -1,2 +1,87 @@
-<h1>Kontak</h1>
-<p>Email: admin@pkbmcelahcahaya.edu.eu.org</p>
+<p>Tambahkan text pembuka untuk formulir kontak versi anda sendiri disini</p>
+
+<br/>
+<br/>
+
+<!-- Contact Form by wiBlogger.com -->
+<style type='text/css'>
+  .contact-form-field{margin-bottom:20px;}
+  .contact-form-field-message{margin-bottom:0;}
+  .contact-form input,
+  .contact-form textarea{border:1px solid #e0e0e0;border-radius:3px;}
+  .contact-form-label{margin:0 0 10px 0;}
+  .contact-form-label span{color:red;}
+  #ContactForm1_contact-form-name,
+  #ContactForm1_contact-form-email {
+    width: 300px;
+    height: 20px;
+    max-width: 95.5%;
+    padding: 2%;
+  }
+  #ContactForm1_contact-form-email-message {
+    width: 93.5%;
+    height: 150px;
+    padding: 3%;
+    resize: none;
+  }
+  #ContactForm1_contact-form-submit {
+    border:none;
+    padding:10px 30px;
+    font-size:20px;
+    background:#3bbd1b;
+    color:#fff;
+    margin-top:20px;
+    border-radius:3px;
+    width:auto;
+    font-size:15px;
+    font-family:inherit;
+  }
+  #ContactForm1_contact-form-error-message {
+    text-align:center;
+    padding:0px 20px;
+    margin-top:15px;
+    color:#D41C1C;
+  }
+  #ContactForm1_contact-form-error-message img {
+    display:none;
+  }
+</style>
+
+<div class='widget contact-form ContactForm' data-version='2' id='ContactForm1'>
+  <div class='contact-form-widget'>
+    <div class='form'>
+      <form name='contact-form'>
+        <div class='contact-form-field contact-form-field-name'>
+          <div class='contact-form-label'>
+            Nama
+          </div>
+          <div class='contact-form-input'>
+            <input class='contact-form-name' id='ContactForm1_contact-form-name' name='name' size='30' type='text' value=''/>
+          </div>
+        </div>
+
+        <div class='contact-form-field contact-form-field-email'>
+          <div class='contact-form-label'>
+            E-mail <span>*</span>
+          </div>
+          <div class='contact-form-input'>
+            <input placeholder="Email balasan akan dikirim ke sini" class='contact-form-email' id='ContactForm1_contact-form-email' name='email' size='30' type='text' value=''/>
+          </div>
+        </div>
+
+        <div class='contact-form-field contact-form-field-message'>
+          <div class='contact-form-label'>
+            Pesan <span>*</span>
+          </div>
+          <div class='contact-form-input'>
+            <textarea class='contact-form-email-message' cols='25' id='ContactForm1_contact-form-email-message' name='email-message' rows='5'></textarea>
+            <input class='contact-form-button contact-form-button-submit' id='ContactForm1_contact-form-submit' type='button' value='Kirim Pesan'/>
+          </div>
+        </div>
+
+        <p class='contact-form-error-message' id='ContactForm1_contact-form-error-message'></p>
+        <p class='contact-form-success-message' id='ContactForm1_contact-form-success-message'></p>
+      </form>
+    </div>
+  </div>
+</div>
