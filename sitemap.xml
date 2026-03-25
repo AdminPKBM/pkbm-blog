@@ -1,41 +1,85 @@
-<style type="text/css">
+<style>
+/* =====================================================
+   MODERN SITEMAP / TOC BLOGGER
+   Disesuaikan dengan tema PKBM Digital
+===================================================== */
+#toc {
+    width: 100%;
+    margin: 20px auto;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Mengikuti font website Anda */
+    overflow: hidden;
+}
 
-#toc{width:99%;margin:5px auto;border:1px solid #2D96DF;
+.labl {
+    font-weight: 600;
+    margin: 0;
+    padding: 12px 20px;
+    background: #2563eb; /* Biru utama tema PKBM */
+    display: block;
+    font-size: 1.1rem;
+}
 
--webkit-box-shadow:4px 4px 8px 2px rgba(0,0,0, 0.2);
+.labl a {
+    color: #ffffff;
+    text-decoration: none;
+}
 
--moz-box-shadow:4px 4px 8px 2px rgba(0,0,0, 0.2);
+.labl:first-letter {
+    text-transform: uppercase;
+}
 
-box-shadow:4px 4px 8px 2px rgba(0,0,0, 0.2);}
+.new {
+    color: #ef4444; /* Warna merah modern untuk badge "New" */
+    font-weight: bold;
+    font-style: normal;
+    font-size: 0.75rem;
+    margin-left: 8px;
+    background: #fee2e2;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
 
-.labl{color:#FF5F00;font-weight:bold;margin:0 -5px;
+.postname {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: #ffffff;
+}
 
-padding:1px 0 2px 11px;background: #3498DB;
+.postname li {
+    border-bottom: 1px solid #f1f5f9;
+    padding: 12px 20px;
+    transition: background 0.3s ease;
+}
 
-border:1px solid #2D96DF;
+.postname li:last-child {
+    border-bottom: none;
+}
 
-border-radius:4px;-moz-border-radius:4px;
+.postname li:hover {
+    background: #f8fafc;
+    padding-left: 25px; /* Efek geser sedikit saat di-hover */
+}
 
--webkit-border-radius:4px;box-shadow:3px 3px 1px #bbb;
+/* Memastikan teks tautan artikel berwarna gelap dan berubah biru saat di-hover */
+.postname li a {
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
--moz-box-shadow:3px 3px 1px #bbb;-webkit-box-shadow:3px 3px 1px #bbb;display:block;}
-
-.labl a{color:#fff;}
-
-.labl:first-letter{text-transform:uppercase;}
-
-.new{color:#FF5F00;font-weight:bold;font-style:italic;}
-
-.postname{font-weight:normal;background:#fff;margin-left: 35px;}
-
-.postname li{border-bottom: #ddd 1px dotted;margin-right:5px}
-
+.postname li a:hover {
+    color: #2563eb;
+}
 </style>
 
 <div id="toc">
-
-<script src="https://cdn.jsdelivr.net/gh/penaindigo/Pena-Indigo-Code@a134f9def601a6f77332eccc35d3d20e0d3c7e49/sitemappenaindigo.js" type="text/javascript"></script>
-
-<script src="https://www.pkbmcelahcahaya.edu.eu.org/feeds/posts/default?max-results=9999&amp;alt=json-in-script&amp;callback=loadtoc">
-
-</script></div>
+    <script src="https://cdn.jsdelivr.net/gh/penaindigo/Pena-Indigo-Code@a134f9def601a6f77332eccc35d3d20e0d3c7e49/sitemappenaindigo.js" type="text/javascript"></script>
+    
+    <script src="https://www.pkbmcelahcahaya.edu.eu.org/feeds/posts/default?max-results=9999&amp;alt=json-in-script&amp;callback=loadtoc"></script>
+</div>
