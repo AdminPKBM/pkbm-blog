@@ -335,7 +335,7 @@
         slice.forEach((file, index) => {
             const slug = file.name.replace('.html', '');
             const title = formatTitle(slug);
-            const imgUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repo}/main/${CONFIG.path}/${slug}.jpg`;
+            const imgUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repo}/main/${CONFIG.path}/${slug}.png`;
 
             const card = document.createElement('article');
             card.className = 'card';
