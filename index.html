@@ -292,17 +292,20 @@
     const CONFIG = {
         username: 'AdminPKBM',
         repo: 'pkbm-blog',
-        path: 'artikel',
-        // Placeholder juga diubah ke .png untuk konsistensi
-        placeholder: "https://via.placeholder.com/600x400/2563eb/ffffff.png?text=PKBM+Digital"
+        path: 'artikel',     // Folder tempat file .html berada
+        imgPath: 'img',      // Folder tempat gambar .png berada
+        placeholder: "https://placehold.co/600x400/2563eb/ffffff/png?text=PKBM+Digital"
     };
 
     let articlesData = []; 
     let filteredData = []; 
     let visibleCount = 6;
 
+    // Karena nama file Anda sudah rapi (menggunakan spasi & huruf kapital), 
+    // kita sederhanakan fungsi ini agar judul tidak rusak.
     function formatTitle(slug) {
-        return slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        // Hapus ekstensi .html saja, biarkan spasi dan huruf kapital aslinya
+        return slug; 
     }
 
     async function init() {
@@ -342,8 +345,10 @@
         slice.forEach((file, index) => {
             const slug = file.name.replace('.html', '');
             const title = formatTitle(slug);
-            // Gambar DIJAMIN menggunakan .png
-            const imgUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repo}/main/${CONFIG.path}/${slug}.png`;
+            
+            // PERBAIKAN: Arahkan ke folder img dan amankan spasi menggunakan encodeURIComponent
+            const safeSlug = encodeURIComponent(slug);
+            const imgUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repo}/main/${CONFIG.imgPath}/${safeSlug}.png`;
 
             const card = document.createElement('article');
             card.className = 'card';
@@ -394,7 +399,6 @@
         document.getElementById('mode-text').innerText = isDark ? 'Terang' : 'Gelap';
     }
 
-    // Toggle menu untuk versi mobile
     function toggleMenu() {
         document.getElementById('nav-menu').classList.toggle('active');
     }
