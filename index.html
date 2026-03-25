@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://pkbmdigital.com/">
     <meta property="og:title" content="PKBM Digital | Portal Pendidikan Nonformal">
     <meta property="og:description" content="Pelajari materi Paket C dan pendidikan nonformal dengan cara yang modern dan digital.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=PKBM+Digital+Portal">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=PKBM+Digital+Portal">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
             --text-main: #0f172a;
             --text-muted: #64748b;
             --border: #e2e8f0;
-            --glass: rgba(255, 255, 255, 0.8);
+            --glass: rgba(255, 255, 255, 0.85);
         }
 
         .dark {
@@ -47,10 +47,10 @@
             --text-main: #f1f5f9;
             --text-muted: #94a3b8;
             --border: #334155;
-            --glass: rgba(30, 41, 59, 0.8);
+            --glass: rgba(30, 41, 59, 0.85);
         }
 
-        * { box-sizing: border-box; transition: background 0.3s, border 0.3s; }
+        * { box-sizing: border-box; transition: background 0.3s, border 0.3s, color 0.3s; }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -60,13 +60,14 @@
             line-height: 1.6;
         }
 
-        /* Header & Nav */
+        /* Navigasi Standard AdSense */
         header {
             position: sticky;
             top: 0;
             z-index: 100;
             background: var(--glass);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
             padding: 1rem 0;
         }
@@ -92,126 +93,44 @@
             text-decoration: none;
         }
 
-        /* Search Section */
-        .hero-section {
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .search-container {
-            position: relative;
-            max-width: 600px;
-            margin: 2rem auto;
-        }
-
-        input#search {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            border-radius: 100px;
-            border: 2px solid var(--border);
-            background: var(--card);
-            color: var(--text-main);
-            font-size: 1rem;
-            outline: none;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
-
-        input#search:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-        }
-
-        /* Grid & Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .card {
-            background: var(--card);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid var(--border);
+        .nav-links {
             display: flex;
-            flex-direction: column;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-        }
-
-        .card-img-wrapper {
-            position: relative;
-            aspect-ratio: 16/9;
-            overflow: hidden;
-        }
-
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .card:hover img { transform: scale(1.05); }
-
-        .card-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-category {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .card h3 {
-            margin: 0 0 1rem 0;
-            font-size: 1.25rem;
-            line-height: 1.4;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn-read {
-            margin-top: auto;
-            display: inline-flex;
+            gap: 1.5rem;
             align-items: center;
-            color: var(--primary);
+        }
+
+        .nav-links a {
             text-decoration: none;
-            font-weight: 600;
-            gap: 0.5rem;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
         }
 
-        /* Loading & UI Elements */
-        .skeleton {
-            aspect-ratio: 16/9;
-            background: linear-gradient(90deg, var(--border) 25%, var(--bg) 50%, var(--border) 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-            border-radius: 20px;
+        .nav-links a:hover {
+            color: var(--primary);
         }
 
-        @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+        }
 
         .toggle-mode {
             background: var(--border);
             border: none;
-            padding: 0.6rem 1rem;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
             cursor: pointer;
             font-weight: 600;
@@ -221,22 +140,79 @@
             gap: 0.5rem;
         }
 
-        .load-more-container { text-align: center; margin-bottom: 4rem; }
-        
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 1rem 2.5rem;
-            border-radius: 100px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 1rem;
+        /* Search & Hero */
+        .hero-section { padding: 3rem 0; text-align: center; }
+        .search-container { position: relative; max-width: 600px; margin: 2rem auto; }
+        input#search {
+            width: 100%; padding: 1rem 1.5rem; border-radius: 100px;
+            border: 2px solid var(--border); background: var(--card);
+            color: var(--text-main); font-size: 1rem; outline: none;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
+        input#search:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); }
 
+        /* Grid & Cards */
+        .grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem; margin-bottom: 3rem;
+        }
+        .card {
+            background: var(--card); border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--border); display: flex; flex-direction: column;
+            animation: fadeIn 0.5s ease forwards;
+        }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .card-img-wrapper { position: relative; aspect-ratio: 16/9; overflow: hidden; }
+        .card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .card:hover img { transform: scale(1.05); }
+        .card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-category { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+        .card h3 { margin: 0 0 1rem 0; font-size: 1.25rem; line-height: 1.4; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .btn-read { margin-top: auto; display: inline-flex; align-items: center; color: var(--primary); text-decoration: none; font-weight: 600; gap: 0.5rem; }
+
+        /* Footer */
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-col h4 { margin-top: 0; color: var(--text-main); }
+        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+
+        /* UI Elements */
+        .skeleton { aspect-ratio: 16/9; background: linear-gradient(90deg, var(--border) 25%, var(--bg) 50%, var(--border) 75%); background-size: 200% 100%; animation: loading 1.5s infinite; border-radius: 20px; }
+        @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .load-more-container { text-align: center; margin-bottom: 4rem; }
+        .btn-primary { background: var(--primary); color: white; border: none; padding: 1rem 2.5rem; border-radius: 100px; font-weight: 600; cursor: pointer; font-size: 1rem; }
         .btn-primary:hover { background: var(--primary-hover); transform: scale(1.02); }
 
-        @media (max-width: 640px) {
+        /* Responsive Mobile Menu */
+        @media (max-width: 768px) {
+            .mobile-toggle { display: block; }
+            .nav-links {
+                display: none; /* Sembunyikan default di mobile */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--card);
+                flex-direction: column;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
             .grid { grid-template-columns: 1fr; }
             .hero-section h1 { font-size: 1.75rem; }
         }
@@ -246,10 +222,22 @@
 
 <header>
     <div class="container nav-wrapper">
-        <a href="#" class="logo">PKBM Digital</a>
-        <button class="toggle-mode" onclick="toggleDark()" aria-label="Ganti Tema">
-            <span id="mode-icon">🌙</span> <span id="mode-text">Gelap</span>
-        </button>
+        <a href="index.html" class="logo">PKBM Digital</a>
+        
+        <nav class="nav-links" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="tentang-kami.html">Tentang Kami</a>
+            <a href="kontak.html">Kontak</a>
+            <a href="kebijakan-privasi.html">Privacy Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="toggle-mode" onclick="toggleDark()" aria-label="Ganti Tema">
+                <span id="mode-icon">🌙</span> <span id="mode-text">Gelap</span>
+            </button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Buka Menu">☰</button>
+        </div>
     </div>
 </header>
 
@@ -274,8 +262,30 @@
     </div>
 </main>
 
-<footer style="text-align: center; padding: 4rem 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
-    <p>&copy; 2026 PKBM Digital. Dibuat dengan dedikasi untuk pendidikan Indonesia.</p>
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Tentang PKBM Digital</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Portal independen yang menyediakan informasi seputar pendidikan nonformal, Kejar Paket A, B, C, serta panduan belajar mandiri untuk masyarakat Indonesia.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <a href="index.html">Beranda</a>
+                <a href="tentang-kami.html">Tentang Kami</a>
+                <a href="kontak.html">Hubungi Kami</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Kebijakan</h4>
+                <a href="kebijakan-privasi.html">Privacy Policy</a>
+                <a href="syarat-ketentuan.html">Terms of Service</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PKBM Digital. Dibuat dengan dedikasi untuk pendidikan Indonesia.</p>
+        </div>
+    </div>
 </footer>
 
 <script>
@@ -283,20 +293,18 @@
         username: 'AdminPKBM',
         repo: 'pkbm-blog',
         path: 'artikel',
-        placeholder: "https://via.placeholder.com/600x400/2563eb/ffffff?text=PKBM+Digital"
+        // Placeholder juga diubah ke .png untuk konsistensi
+        placeholder: "https://via.placeholder.com/600x400/2563eb/ffffff.png?text=PKBM+Digital"
     };
 
-    let articlesData = []; // Data asli
-    let filteredData = []; // Data setelah filter
+    let articlesData = []; 
+    let filteredData = []; 
     let visibleCount = 6;
 
-    // Helper: Format judul dari slug file
     function formatTitle(slug) {
-        return slug.replace(/-/g, ' ')
-                   .replace(/\b\w/g, l => l.toUpperCase());
+        return slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     }
 
-    // Fetch data dari GitHub API
     async function init() {
         const grid = document.getElementById('grid');
         try {
@@ -304,9 +312,8 @@
             if (!res.ok) throw new Error('Gagal fetch');
             const data = await res.json();
             
-            // Simpan hanya file .html
             articlesData = data.filter(f => f.name.endsWith('.html'));
-            filteredData = [...articlesData]; // Clone data
+            filteredData = [...articlesData]; 
             
             renderArticles();
         } catch (err) {
@@ -335,6 +342,7 @@
         slice.forEach((file, index) => {
             const slug = file.name.replace('.html', '');
             const title = formatTitle(slug);
+            // Gambar DIJAMIN menggunakan .png
             const imgUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repo}/main/${CONFIG.path}/${slug}.png`;
 
             const card = document.createElement('article');
@@ -357,7 +365,6 @@
         loadMoreBtn.style.display = visibleCount < filteredData.length ? 'inline-block' : 'none';
     }
 
-    // Search Logic (Debounced & Non-Destructive)
     let searchTimeout;
     document.getElementById('search').addEventListener('input', (e) => {
         clearTimeout(searchTimeout);
@@ -371,13 +378,11 @@
         }, 300);
     });
 
-    // Load More
     document.getElementById('loadMore').onclick = () => {
         visibleCount += 6;
         renderArticles();
     };
 
-    // Dark Mode Toggle
     function toggleDark() {
         const isDark = document.body.classList.toggle('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
@@ -389,7 +394,11 @@
         document.getElementById('mode-text').innerText = isDark ? 'Terang' : 'Gelap';
     }
 
-    // Init Theme & App
+    // Toggle menu untuk versi mobile
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+
     window.onload = () => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
