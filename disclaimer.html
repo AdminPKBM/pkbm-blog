@@ -1,19 +1,210 @@
-<h1>Disclaimer for Populer Topik</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer - Populer Topik</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<p>If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at uusdede338@gmail.com</p>
+    <style>
+        /* ================= VARIABEL & BASE ================= */
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --glass: rgba(255, 255, 255, 0.85);
+        }
 
-<h2>Disclaimers for Populer Topik</h2>
+        .dark {
+            --bg: #020617;
+            --card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --glass: rgba(30, 41, 59, 0.85);
+        }
 
-<p>All the information on this website - https://populer-topik.blogspot.com/ - is published in good faith and for general information purpose only. Populer Topik does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (Populer Topik), is strictly at your own risk. Populer Topik will not be liable for any losses and/or damages in connection with the use of our website. Our Disclaimer was generated with the help of the <a href="https://www.privacypolicyonline.com/disclaimer-generator/">Disclaimer Generator</a>.</p>
+        * { box-sizing: border-box; transition: background 0.3s, border 0.3s, color 0.3s; }
 
-<p>From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone 'bad'.</p>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
 
-<p>Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.</p>
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
-<h2>Consent</h2>
+        /* ================= HEADER ================= */
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border); padding: 1rem 0;
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo {
+            font-size: 1.5rem; font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        .header-actions { display: flex; align-items: center; gap: 1rem; }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0; }
+        .toggle-mode {
+            background: var(--border); border: none; padding: 0.5rem 1rem;
+            border-radius: 50px; cursor: pointer; font-weight: 600;
+            color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;
+        }
 
-<p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+        /* ================= STYLING HALAMAN TEKS (LEGAL) ================= */
+        .page-wrapper {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+        .card {
+            background: var(--card); border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--border); padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        
+        .page-content h1 { font-size: 2.2rem; color: var(--text-main); margin-top: 0; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem;}
+        .page-content h2 { font-size: 1.5rem; color: var(--text-main); margin-top: 2rem; margin-bottom: 1rem; }
+        .page-content p { color: var(--text-main); font-size: 1.05rem; margin-bottom: 1.2rem; }
+        .page-content ul { color: var(--text-main); margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.05rem; }
+        .page-content li { margin-bottom: 0.5rem; }
+        .page-content a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .page-content a:hover { text-decoration: underline; }
 
-<h2>Update</h2>
+        /* ================= FOOTER ================= */
+        footer { background: var(--card); border-top: 1px solid var(--border); padding: 3rem 0; margin-top: 4rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { margin-top: 0; color: var(--text-main); }
+        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 
-<p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .mobile-toggle { display: block; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--card); flex-direction: column; padding: 1rem;
+                border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .card { padding: 1.5rem; }
+            .page-content h1 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">Populer Topik</a>
+        <nav class="nav-links" id="nav-menu">
+            <a href="index.html">Beranda</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="contact.html">Kontak</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+        <div class="header-actions">
+            <button class="toggle-mode" onclick="toggleDark()" aria-label="Ganti Tema">
+                <span id="mode-icon">🌙</span> <span id="mode-text">Gelap</span>
+            </button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Buka Menu">☰</button>
+        </div>
+    </div>
+</header>
+
+<main class="container page-wrapper">
+    <article class="card page-content">
+        
+        <h1>Disclaimer for Populer Topik</h1>
+
+        <p>If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at <a href="mailto:uusdede338@gmail.com">uusdede338@gmail.com</a>.</p>
+
+        <h2>Disclaimers for Populer Topik</h2>
+
+        <p>All the information on this website - https://populer-topik.blogspot.com/ - is published in good faith and for general information purpose only. Populer Topik does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (Populer Topik), is strictly at your own risk. Populer Topik will not be liable for any losses and/or damages in connection with the use of our website. Our Disclaimer was generated with the help of the <a href="https://www.privacypolicyonline.com/disclaimer-generator/">Disclaimer Generator</a>.</p>
+
+        <p>From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone 'bad'.</p>
+
+        <p>Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.</p>
+
+        <h2>Consent</h2>
+        <p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+
+        <h2>Update</h2>
+        <p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
+
+    </article>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Tentang Populer Topik</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Menyajikan informasi terupdate dan terpercaya untuk pengunjung kami. Didesain untuk memberikan pengalaman membaca terbaik.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="contact.html">Hubungi Kami</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Kebijakan</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Populer Topik. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleDark() {
+        const isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeUI(isDark);
+    }
+
+    function updateThemeUI(isDark) {
+        document.getElementById('mode-icon').innerText = isDark ? '☀️' : '🌙';
+        document.getElementById('mode-text').innerText = isDark ? 'Terang' : 'Gelap';
+    }
+
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+
+    // Cek tema yang tersimpan saat halaman dimuat
+    window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark');
+            updateThemeUI(true);
+        }
+    };
+</script>
+
+</body>
+</html>
