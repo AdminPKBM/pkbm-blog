@@ -1,12 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<style type="text/css">
 
-<url>
-<loc>https://pkbmcelahcahaya.edu.eu.org/</loc>
-</url>
+#toc{width:99%;margin:5px auto;border:1px solid #2D96DF;
 
-<url>
-<loc>https://pkbmcelahcahaya.edu.eu.org/artikel/artikel1.html</loc>
-</url>
+-webkit-box-shadow:4px 4px 8px 2px rgba(0,0,0, 0.2);
 
-</urlset>
+-moz-box-shadow:4px 4px 8px 2px rgba(0,0,0, 0.2);
+
+box-shadow:4px 4px 8px 2px rgba(0,0,0, 0.2);}
+
+.labl{color:#FF5F00;font-weight:bold;margin:0 -5px;
+
+padding:1px 0 2px 11px;background: #3498DB;
+
+border:1px solid #2D96DF;
+
+border-radius:4px;-moz-border-radius:4px;
+
+-webkit-border-radius:4px;box-shadow:3px 3px 1px #bbb;
+
+-moz-box-shadow:3px 3px 1px #bbb;-webkit-box-shadow:3px 3px 1px #bbb;display:block;}
+
+.labl a{color:#fff;}
+
+.labl:first-letter{text-transform:uppercase;}
+
+.new{color:#FF5F00;font-weight:bold;font-style:italic;}
+
+.postname{font-weight:normal;background:#fff;margin-left: 35px;}
+
+.postname li{border-bottom: #ddd 1px dotted;margin-right:5px}
+
+</style>
+
+<div id="toc">
+
+<script src="https://cdn.jsdelivr.net/gh/penaindigo/Pena-Indigo-Code@a134f9def601a6f77332eccc35d3d20e0d3c7e49/sitemappenaindigo.js" type="text/javascript"></script>
+
+<script src="https://www.pkbmcelahcahaya.edu.eu.org/feeds/posts/default?max-results=9999&amp;alt=json-in-script&amp;callback=loadtoc">
+
+</script></div>
