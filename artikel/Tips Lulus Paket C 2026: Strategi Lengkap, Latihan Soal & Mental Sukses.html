@@ -6,234 +6,384 @@
     <meta name="description" content="Panduan lengkap lulus Paket C 2026: strategi belajar efektif, latihan soal, tips ujian, dan persiapan mental warga belajar PKBM agar sukses meraih ijazah kesetaraan.">
     <meta name="keywords" content="Tips Lulus Paket C, Cara Lulus Paket C, Belajar PKBM, Ujian Kesetaraan 2026, Latihan Soal Paket C">
     <title>Tips Lulus Paket C 2026: Strategi Lengkap, Latihan Soal & Mental Sukses</title>
-    <link rel="stylesheet" href="../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= VARIABEL & BASE ================= */
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --glass: rgba(255, 255, 255, 0.85);
+        }
+
+        .dark {
+            --bg: #020617;
+            --card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --glass: rgba(30, 41, 59, 0.85);
+        }
+
+        * { box-sizing: border-box; transition: background 0.3s, border 0.3s, color 0.3s; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* ================= HEADER ================= */
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border); padding: 1rem 0;
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo {
+            font-size: 1.5rem; font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        .header-actions { display: flex; align-items: center; gap: 1rem; }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0; }
+        .toggle-mode {
+            background: var(--border); border: none; padding: 0.5rem 1rem;
+            border-radius: 50px; cursor: pointer; font-weight: 600;
+            color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;
+        }
+
+        /* ================= STYLING KHUSUS ARTIKEL ================= */
+        .article-wrapper {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+        .card {
+            background: var(--card); border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--border); padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        
+        /* Tipografi Artikel */
+        .article-content h1 { font-size: 2.2rem; color: var(--text-main); line-height: 1.3; margin-top: 0; margin-bottom: 1rem; }
+        .article-content h2 { font-size: 1.6rem; color: var(--text-main); margin-top: 2.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .article-content h3 { font-size: 1.3rem; color: var(--text-main); margin-top: 2rem; }
+        .article-content p { color: var(--text-main); font-size: 1.05rem; margin-bottom: 1.5rem; }
+        .article-content ul, .article-content ol { color: var(--text-main); margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.05rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+        .article-content a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .article-content a:hover { text-decoration: underline; }
+        .article-content hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+        
+        /* Meta & Gambar */
+        .article-meta {
+            display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+            color: var(--text-muted); font-size: 0.9rem;
+            margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);
+        }
+        .article-content figure { margin: 2rem 0; text-align: center; }
+        .article-content img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
+        .article-content figcaption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; font-style: italic; }
+
+        /* ================= FOOTER ================= */
+        footer { background: var(--card); border-top: 1px solid var(--border); padding: 3rem 0; margin-top: 4rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { margin-top: 0; color: var(--text-main); }
+        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .mobile-toggle { display: block; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--card); flex-direction: column; padding: 1rem;
+                border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .card { padding: 1.5rem; }
+            .article-content h1 { font-size: 1.7rem; }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="logo">PKBM DIGITAL</div>
-    <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">Tentang</a></li>
-        <li><a href="../contact.html">Kontak</a></li>
-    </ul>
-</nav>
+<header>
+    <div class="container nav-wrapper">
+        <a href="../index.html" class="logo">PKBM Digital</a>
+        <nav class="nav-links" id="nav-menu">
+            <a href="../index.html">Beranda</a>
+            <a href="../tentang-kami.html">Tentang Kami</a>
+            <a href="../kontak.html">Kontak</a>
+            <a href="../kebijakan-privasi.html">Privacy Policy</a>
+            <a href="../disclaimer.html">Disclaimer</a>
+        </nav>
+        <div class="header-actions">
+            <button class="toggle-mode" onclick="toggleDark()" aria-label="Ganti Tema">
+                <span id="mode-icon">🌙</span> <span id="mode-text">Gelap</span>
+            </button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Buka Menu">☰</button>
+        </div>
+    </div>
+</header>
 
-<main class="container">
+<main class="container article-wrapper">
+    <article class="card article-content">
+        
+        <h1>Tips Lulus Paket C 2026: Panduan Lengkap dari Belajar hingga Hari Ujian</h1>
+        
+        <div class="article-meta">
+            <span>✍️ Ditulis oleh: Konselor Pendidikan PKBM</span>
+            <span>📅 Update: 25 Maret 2026</span>
+        </div>
 
-<article class="card" style="margin-top:20px; padding:40px;">
+        <figure>
+            <img src="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Tips%20lulus%20paket%20C%20dengan%20percaya%20diri.png" 
+                 alt="Tips Lulus Paket C 2026"
+                 onerror="this.src='https://placehold.co/800x450/2563eb/ffffff.png?text=Ilustrasi+Artikel'">
+            <figcaption>Strategi sukses warga belajar PKBM menghadapi ujian kesetaraan</figcaption>
+        </figure>
 
-<h1>Tips Lulus Paket C 2026: Panduan Lengkap dari Belajar hingga Hari Ujian</h1>
+        <p><strong>Paket C</strong> adalah jalur pendidikan kesetaraan setara SMA yang membuka peluang besar untuk kuliah, kerja, dan masa depan lebih baik. Namun, banyak warga belajar menghadapi tantangan seperti waktu terbatas, pekerjaan, dan kurangnya strategi belajar.</p>
 
-<figure style="text-align:center; margin:20px 0;">
-<img src="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Tips%20lulus%20paket%20C%20dengan%20percaya%20diri.png" 
-alt="Tips Lulus Paket C 2026"
-style="width:100%; max-width:800px; border-radius:10px;">
-<figcaption style="font-size:0.9rem; color:#7f8c8d;">
-Strategi sukses warga belajar PKBM menghadapi ujian kesetaraan
-</figcaption>
-</figure>
+        <p>Artikel ini adalah <strong>panduan pilar (ultimate guide)</strong> yang akan membantu Anda lulus Paket C dengan strategi terbukti, bahkan jika Anda sangat sibuk.</p>
 
-<p style="color:#7f8c8d; font-size:0.9rem;">
-Ditulis oleh: Konselor Pendidikan PKBM | Update: 2026
-</p>
+        <hr>
 
-<hr>
+        <h2>Kenapa Banyak Peserta Gagal Lulus Paket C?</h2>
+        <p>Sebelum masuk ke strategi, penting memahami penyebab kegagalan:</p>
+        <ul>
+            <li>Belajar sistem kebut semalam (SKS)</li>
+            <li>Tidak fokus pada kisi-kisi</li>
+            <li>Jarang latihan soal</li>
+            <li>Kurang persiapan mental</li>
+            <li>Gugup saat ujian</li>
+        </ul>
+        <p>Kabar baiknya: semua ini bisa diatasi dengan strategi yang tepat.</p>
 
-<p><strong>Paket C</strong> adalah jalur pendidikan kesetaraan setara SMA yang membuka peluang besar untuk kuliah, kerja, dan masa depan lebih baik. Namun, banyak warga belajar menghadapi tantangan seperti waktu terbatas, pekerjaan, dan kurangnya strategi belajar.</p>
+        <hr>
 
-<p>Artikel ini adalah <strong>panduan pilar (ultimate guide)</strong> yang akan membantu Anda lulus Paket C dengan strategi terbukti, bahkan jika Anda sangat sibuk.</p>
+        <h2>1. Strategi Belajar Efektif untuk Warga Belajar Sibuk</h2>
 
-<hr>
+        <h3>a. Gunakan Teknik Belajar Mikro (Micro Learning)</h3>
+        <p>Belajar 10–15 menit tapi rutin setiap hari jauh lebih efektif dibanding belajar 3 jam sekaligus.</p>
 
-<h2>Kenapa Banyak Peserta Gagal Lulus Paket C?</h2>
+        <h3>b. Gunakan Modul Digital</h3>
+        <p>Simpan materi di HP agar bisa belajar di sela aktivitas seperti:</p>
+        <ul>
+            <li>Istirahat kerja</li>
+            <li>Perjalanan</li>
+            <li>Sebelum tidur</li>
+        </ul>
 
-<p>Sebelum masuk ke strategi, penting memahami penyebab kegagalan:</p>
+        <h3>c. Fokus pada Kisi-Kisi Resmi</h3>
+        <p>Jangan belajar semua materi. Fokus hanya pada yang sering keluar di ujian.</p>
 
-<ul>
-<li>Belajar sistem kebut semalam (SKS)</li>
-<li>Tidak fokus pada kisi-kisi</li>
-<li>Jarang latihan soal</li>
-<li>Kurang persiapan mental</li>
-<li>Gugup saat ujian</li>
-</ul>
+        <h3>d. Gunakan Mind Mapping</h3>
+        <p>Membantu mengingat konsep dengan cepat dan efisien.</p>
 
-<p>Kabar baiknya: semua ini bisa diatasi dengan strategi yang tepat.</p>
+        <p><strong>Baca juga:</strong> <a href="artikel1.html">Teknik Belajar Efektif untuk PKBM</a></p>
 
-<hr>
+        <hr>
 
-<h2>1. Strategi Belajar Efektif untuk Warga Belajar Sibuk</h2>
+        <h2>2. Strategi Latihan Soal (Kunci Lulus Cepat)</h2>
+        <p>Latihan soal adalah faktor paling menentukan kelulusan.</p>
 
-<h3>a. Gunakan Teknik Belajar Mikro (Micro Learning)</h3>
-<p>Belajar 10–15 menit tapi rutin setiap hari jauh lebih efektif dibanding belajar 3 jam sekaligus.</p>
+        <h3>a. Gunakan Soal Tahun Sebelumnya</h3>
+        <p>Pola soal cenderung berulang. Fokus memahami pola, bukan menghafal.</p>
 
-<h3>b. Gunakan Modul Digital</h3>
-<p>Simpan materi di HP agar bisa belajar di sela aktivitas seperti:</p>
-<ul>
-<li>Istirahat kerja</li>
-<li>Perjalanan</li>
-<li>Sebelum tidur</li>
-</ul>
+        <h3>b. Simulasi Ujian</h3>
+        <ul>
+            <li>Gunakan timer</li>
+            <li>Kerjakan tanpa bantuan</li>
+            <li>Latih kecepatan dan fokus</li>
+        </ul>
 
-<h3>c. Fokus pada Kisi-Kisi Resmi</h3>
-<p>Jangan belajar semua materi. Fokus hanya pada yang sering keluar di ujian.</p>
+        <h3>c. Evaluasi Kesalahan</h3>
+        <p>Setiap kesalahan adalah peluang belajar.</p>
 
-<h3>d. Gunakan Mind Mapping</h3>
-<p>Membantu mengingat konsep dengan cepat dan efisien.</p>
+        <h3>d. Target Minimal</h3>
+        <p>Latihan minimal:</p>
+        <ul>
+            <li>20–50 soal per hari</li>
+            <li>1 try out per minggu</li>
+        </ul>
 
-<p><strong>Baca juga:</strong> <a href="artikel1.html">Teknik Belajar Efektif untuk PKBM</a></p>
+        <hr>
 
-<hr>
+        <h2>3. Materi yang WAJIB Dikuasai</h2>
 
-<h2>2. Strategi Latihan Soal (Kunci Lulus Cepat)</h2>
+        <h3>📘 Literasi (Bahasa Indonesia & Inggris)</h3>
+        <ul>
+            <li>Memahami bacaan</li>
+            <li>Menarik kesimpulan</li>
+            <li>Makna kata</li>
+        </ul>
 
-<p>Latihan soal adalah faktor paling menentukan kelulusan.</p>
+        <h3>🔢 Numerasi (Matematika Dasar)</h3>
+        <ul>
+            <li>Persentase</li>
+            <li>Perbandingan</li>
+            <li>Logika matematika</li>
+        </ul>
 
-<h3>a. Gunakan Soal Tahun Sebelumnya</h3>
-<p>Pola soal cenderung berulang. Fokus memahami pola, bukan menghafal.</p>
+        <h3>🌍 Pengetahuan Umum</h3>
+        <ul>
+            <li>IPS & IPA dasar</li>
+            <li>Kehidupan sehari-hari</li>
+        </ul>
 
-<h3>b. Simulasi Ujian</h3>
-<ul>
-<li>Gunakan timer</li>
-<li>Kerjakan tanpa bantuan</li>
-<li>Latih kecepatan dan fokus</li>
-</ul>
+        <hr>
 
-<h3>c. Evaluasi Kesalahan</h3>
-<p>Setiap kesalahan adalah peluang belajar.</p>
+        <h2>4. Strategi Menghadapi Soal Pilihan Ganda</h2>
+        <ul>
+            <li>Eliminasi jawaban yang jelas salah</li>
+            <li>Pilih jawaban paling logis</li>
+            <li>Jangan terpaku pada satu soal</li>
+            <li>Kerjakan yang mudah dulu</li>
+        </ul>
 
-<h3>d. Target Minimal</h3>
-<p>Latihan minimal:</p>
-<ul>
-<li>20–50 soal per hari</li>
-<li>1 try out per minggu</li>
-</ul>
+        <hr>
 
-<hr>
+        <h2>5. Persiapan Hari H Ujian</h2>
 
-<h2>3. Materi yang WAJIB Dikuasai</h2>
+        <h3>a. Persiapan Teknis</h3>
+        <ul>
+            <li>Perangkat siap (HP/Laptop)</li>
+            <li>Koneksi stabil</li>
+            <li>Baterai penuh</li>
+        </ul>
 
-<h3>📘 Literasi (Bahasa Indonesia & Inggris)</h3>
-<ul>
-<li>Memahami bacaan</li>
-<li>Menarik kesimpulan</li>
-<li>Makna kata</li>
-</ul>
+        <h3>b. Persiapan Fisik</h3>
+        <ul>
+            <li>Tidur cukup (7 jam)</li>
+            <li>Makan sebelum ujian</li>
+        </ul>
 
-<h3>🔢 Numerasi (Matematika Dasar)</h3>
-<ul>
-<li>Persentase</li>
-<li>Perbandingan</li>
-<li>Logika matematika</li>
-</ul>
+        <h3>c. Persiapan Mental</h3>
+        <ul>
+            <li>Jangan panik</li>
+            <li>Baca soal dengan teliti</li>
+            <li>Yakin pada diri sendiri</li>
+        </ul>
 
-<h3>🌍 Pengetahuan Umum</h3>
-<ul>
-<li>IPS & IPA dasar</li>
-<li>Kehidupan sehari-hari</li>
-</ul>
+        <hr>
 
-<hr>
+        <h2>6. Tips Rahasia Agar Nilai Tinggi</h2>
+        <ul>
+            <li>Latihan soal lebih penting daripada membaca</li>
+            <li>Konsisten lebih penting daripada lama belajar</li>
+            <li>Fokus pada soal HOTS (penalaran)</li>
+            <li>Gunakan teknik eliminasi</li>
+        </ul>
 
-<h2>4. Strategi Menghadapi Soal Pilihan Ganda</h2>
+        <hr>
 
-<ul>
-<li>Eliminasi jawaban yang jelas salah</li>
-<li>Pilih jawaban paling logis</li>
-<li>Jangan terpaku pada satu soal</li>
-<li>Kerjakan yang mudah dulu</li>
-</ul>
+        <h2>FAQ (Pertanyaan yang Sering Ditanyakan)</h2>
 
-<hr>
+        <h3>Berapa lama waktu ideal belajar Paket C?</h3>
+        <p>Minimal 1–2 jam per hari secara konsisten.</p>
 
-<h2>5. Persiapan Hari H Ujian</h2>
+        <h3>Apakah Paket C bisa lulus tanpa bimbel?</h3>
+        <p>Bisa, asalkan disiplin latihan soal dan fokus kisi-kisi.</p>
 
-<h3>a. Persiapan Teknis</h3>
-<ul>
-<li>Perangkat siap (HP/Laptop)</li>
-<li>Koneksi stabil</li>
-<li>Baterai penuh</li>
-</ul>
+        <h3>Apakah soal Paket C sulit?</h3>
+        <p>Tidak, jika terbiasa latihan soal dan memahami konsep dasar.</p>
 
-<h3>b. Persiapan Fisik</h3>
-<ul>
-<li>Tidur cukup (7 jam)</li>
-<li>Makan sebelum ujian</li>
-</ul>
+        <hr>
 
-<h3>c. Persiapan Mental</h3>
-<ul>
-<li>Jangan panik</li>
-<li>Baca soal dengan teliti</li>
-<li>Yakin pada diri sendiri</li>
-</ul>
+        <h2>Kesimpulan: Lulus Paket C Itu Strategi, Bukan Keberuntungan</h2>
+        <p>Lulus Paket C bukan soal siapa yang paling pintar, tetapi siapa yang paling siap.</p>
+        <p>Dengan strategi:</p>
+        <ul>
+            <li>Belajar efektif</li>
+            <li>Latihan soal rutin</li>
+            <li>Persiapan mental matang</li>
+        </ul>
+        <p>Anda sudah 90% menuju kelulusan.</p>
+        <p><strong>Ingat:</strong> Ijazah adalah pintu masa depan. Jangan menyerah sekarang.</p>
 
-<hr>
+        <hr>
 
-<h2>6. Tips Rahasia Agar Nilai Tinggi</h2>
+        <h3>🔥 Langkah Selanjutnya</h3>
+        <ul>
+            <li><a href="artikel1.html">Teknik Belajar Efektif</a></li>
+            <li><a href="artikel2.html">Latihan Soal Paket C</a></li>
+            <li><a href="artikel3.html">Tips Lulus Ujian Online</a></li>
+        </ul>
 
-<ul>
-<li>Latihan soal lebih penting daripada membaca</li>
-<li>Konsisten lebih penting daripada lama belajar</li>
-<li>Fokus pada soal HOTS (penalaran)</li>
-<li>Gunakan teknik eliminasi</li>
-</ul>
-
-<hr>
-
-<h2>FAQ (Pertanyaan yang Sering Ditanyakan)</h2>
-
-<h3>Berapa lama waktu ideal belajar Paket C?</h3>
-<p>Minimal 1–2 jam per hari secara konsisten.</p>
-
-<h3>Apakah Paket C bisa lulus tanpa bimbel?</h3>
-<p>Bisa, asalkan disiplin latihan soal dan fokus kisi-kisi.</p>
-
-<h3>Apakah soal Paket C sulit?</h3>
-<p>Tidak, jika terbiasa latihan soal dan memahami konsep dasar.</p>
-
-<hr>
-
-<h2>Kesimpulan: Lulus Paket C Itu Strategi, Bukan Keberuntungan</h2>
-
-<p>Lulus Paket C bukan soal siapa yang paling pintar, tetapi siapa yang paling siap.</p>
-
-<p>Dengan strategi:</p>
-<ul>
-<li>Belajar efektif</li>
-<li>Latihan soal rutin</li>
-<li>Persiapan mental matang</li>
-</ul>
-
-<p>Anda sudah 90% menuju kelulusan.</p>
-
-<p><strong>Ingat:</strong> Ijazah adalah pintu masa depan. Jangan menyerah sekarang.</p>
-
-<hr>
-
-<h3>🔥 Langkah Selanjutnya</h3>
-<ul>
-<li><a href="artikel1.html">Teknik Belajar Efektif</a></li>
-<li><a href="artikel2.html">Latihan Soal Paket C</a></li>
-<li><a href="artikel3.html">Tips Lulus Ujian Online</a></li>
-</ul>
-
-</article>
-
+    </article>
 </main>
 
 <footer>
-<p>&copy; 2026 PKBM Digital. Belajar Tanpa Batas.</p>
-
-<div style="margin-top:10px;">
-<a href="../privacy.html">Privacy Policy</a> | 
-<a href="../disclaimer.html">Disclaimer</a> | 
-<a href="../contact.html">Kontak</a>
-</div>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Tentang PKBM Digital</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Portal independen yang menyediakan informasi seputar pendidikan nonformal, Kejar Paket A, B, C, serta panduan belajar mandiri untuk masyarakat Indonesia.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <a href="../index.html">Beranda</a>
+                <a href="../tentang-kami.html">Tentang Kami</a>
+                <a href="../kontak.html">Hubungi Kami</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Kebijakan</h4>
+                <a href="../kebijakan-privasi.html">Privacy Policy</a>
+                <a href="../disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PKBM Digital. Dibuat dengan dedikasi untuk pendidikan Indonesia.</p>
+        </div>
+    </div>
 </footer>
 
-<script src="../script.js"></script>
+<script>
+    function toggleDark() {
+        const isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeUI(isDark);
+    }
+
+    function updateThemeUI(isDark) {
+        document.getElementById('mode-icon').innerText = isDark ? '☀️' : '🌙';
+        document.getElementById('mode-text').innerText = isDark ? 'Terang' : 'Gelap';
+    }
+
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+
+    // Cek tema yang tersimpan saat halaman dimuat
+    window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark');
+            updateThemeUI(true);
+        }
+    };
+</script>
 
 </body>
 </html>
