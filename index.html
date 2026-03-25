@@ -1,250 +1,403 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502"
-     crossorigin="anonymous"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PKBM Digital | Portal Pendidikan Nonformal & Paket C</title>
+    <meta name="title" content="PKBM Digital | Portal Pendidikan Nonformal & Paket C">
+    <meta name="description" content="Pusat informasi artikel Paket C, tips belajar mandiri, dan update pendidikan nonformal terlengkap di Indonesia.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pkbmdigital.com/">
+    <meta property="og:title" content="PKBM Digital | Portal Pendidikan Nonformal">
+    <meta property="og:description" content="Pelajari materi Paket C dan pendidikan nonformal dengan cara yang modern dan digital.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=PKBM+Digital+Portal">
 
-<title>PKBM Digital Blog | Belajar Paket C & Pendidikan Nonformal</title>
-<meta name="description" content="Portal PKBM Digital berisi artikel Paket C, pendidikan nonformal, tips belajar, dan info terbaru untuk siswa dan tutor.">
-    <meta name="google-adsense-account" content="ca-pub-4454451699877502"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "PKBM Digital",
+      "description": "Portal berita dan artikel pendidikan nonformal Paket A, B, dan C.",
+      "url": "https://pkbmdigital.com"
+    }
+    </script>
 
-<style>
-:root{
-    --bg:#f8fafc;
-    --card:#ffffff;
-    --text:#1e293b;
-    --primary:#2563eb;
-}
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --glass: rgba(255, 255, 255, 0.8);
+        }
 
-.dark{
-    --bg:#0f172a;
-    --card:#1e293b;
-    --text:#f1f5f9;
-}
+        .dark {
+            --bg: #020617;
+            --card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --glass: rgba(30, 41, 59, 0.8);
+        }
 
-body{
-    font-family:Inter;
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    transition:.3s;
-}
+        * { box-sizing: border-box; transition: background 0.3s, border 0.3s; }
 
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-}
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-}
+        /* Header & Nav */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
 
-h1{
-    margin:0;
-}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-    gap:20px;
-}
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.card{
-    background:var(--card);
-    border-radius:14px;
-    overflow:hidden;
-    border:1px solid #e2e8f0;
-    transition:.3s;
-}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
 
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
+        /* Search Section */
+        .hero-section {
+            padding: 3rem 0;
+            text-align: center;
+        }
 
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-}
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
 
-.card-content{
-    padding:15px;
-}
+        input#search {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 100px;
+            border: 2px solid var(--border);
+            background: var(--card);
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
 
-.btn{
-    color:var(--primary);
-    text-decoration:none;
-    font-weight:bold;
-}
+        input#search:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
 
-input{
-    padding:10px;
-    width:100%;
-    margin:20px 0;
-    border-radius:8px;
-    border:1px solid #ccc;
-}
+        /* Grid & Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
 
-.toggle{
-    cursor:pointer;
-    padding:8px 12px;
-    border-radius:8px;
-    border:none;
-    background:var(--primary);
-    color:#fff;
-}
+        .card {
+            background: var(--card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.5s ease forwards;
+        }
 
-.skeleton{
-    height:250px;
-    border-radius:12px;
-    background:linear-gradient(90deg,#eee,#ddd,#eee);
-    animation:loading 1.5s infinite;
-}
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
 
-@keyframes loading{
-    0%{background-position:-200px}
-    100%{background-position:200px}
-}
+        .card-img-wrapper {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
 
-.empty{
-    text-align:center;
-    padding:40px;
-    opacity:.6;
-}
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
 
-.load-more{
-    display:block;
-    margin:30px auto;
-    padding:10px 20px;
-    border:none;
-    background:var(--primary);
-    color:#fff;
-    border-radius:8px;
-    cursor:pointer;
-}
-</style>
+        .card:hover img { transform: scale(1.05); }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            margin: 0 0 1rem 0;
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-read {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            gap: 0.5rem;
+        }
+
+        /* Loading & UI Elements */
+        .skeleton {
+            aspect-ratio: 16/9;
+            background: linear-gradient(90deg, var(--border) 25%, var(--bg) 50%, var(--border) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: 20px;
+        }
+
+        @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .toggle-mode {
+            background: var(--border);
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .load-more-container { text-align: center; margin-bottom: 4rem; }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 100px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover { background: var(--primary-hover); transform: scale(1.02); }
+
+        @media (max-width: 640px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero-section h1 { font-size: 1.75rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+<header>
+    <div class="container nav-wrapper">
+        <a href="#" class="logo">PKBM Digital</a>
+        <button class="toggle-mode" onclick="toggleDark()" aria-label="Ganti Tema">
+            <span id="mode-icon">🌙</span> <span id="mode-text">Gelap</span>
+        </button>
+    </div>
+</header>
 
-<div class="header">
-<h1>PKBM Digital</h1>
-<button class="toggle" onclick="toggleDark()">🌙 Mode</button>
-</div>
+<main class="container">
+    <section class="hero-section">
+        <h1>Wawasan Pendidikan Nonformal</h1>
+        <p style="color: var(--text-muted)">Temukan artikel, panduan, dan tips seputar pendidikan kesetaraan.</p>
+        
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Cari topik belajar (contoh: Ujian Paket C)..." aria-label="Cari artikel">
+        </div>
+    </section>
 
-<input type="text" id="search" placeholder="Cari artikel...">
+    <div id="grid" class="grid">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+    </div>
 
-<div id="grid" class="grid"></div>
+    <div class="load-more-container">
+        <button id="loadMore" class="btn-primary" style="display:none;">Muat Lebih Banyak</button>
+    </div>
+</main>
 
-<button id="loadMore" class="load-more" style="display:none;">Muat Lebih Banyak</button>
-
-</div>
+<footer style="text-align: center; padding: 4rem 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem;">
+    <p>&copy; 2026 PKBM Digital. Dibuat dengan dedikasi untuk pendidikan Indonesia.</p>
+</footer>
 
 <script>
-const USERNAME = 'AdminPKBM';
-const REPO = 'pkbm-blog';
-const PATH = 'artikel';
+    const CONFIG = {
+        username: 'AdminPKBM',
+        repo: 'pkbm-blog',
+        path: 'artikel',
+        placeholder: "https://via.placeholder.com/600x400/2563eb/ffffff?text=PKBM+Digital"
+    };
 
-let allArticles = [];
-let visibleCount = 6;
+    let articlesData = []; // Data asli
+    let filteredData = []; // Data setelah filter
+    let visibleCount = 6;
 
-const PLACEHOLDER = "https://via.placeholder.com/400x200?text=PKBM+Digital";
-
-// helper capitalize
-function formatTitle(slug){
-    return slug.replace(/-/g,' ')
-               .replace(/\b\w/g, l => l.toUpperCase());
-}
-
-async function loadArticles(){
-    const grid = document.getElementById('grid');
-
-    grid.innerHTML = Array(6).fill('<div class="skeleton"></div>').join('');
-
-    try{
-        const res = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${PATH}`);
-        const data = await res.json();
-
-        allArticles = data.filter(f => f.name.endsWith('.html'));
-
-        renderArticles();
-
-    }catch(err){
-        grid.innerHTML = "<p>Gagal memuat artikel 😢</p>";
-    }
-}
-
-function renderArticles(){
-    const grid = document.getElementById('grid');
-    const loadMoreBtn = document.getElementById('loadMore');
-
-    grid.innerHTML = '';
-
-    const visible = allArticles.slice(0, visibleCount);
-
-    if(visible.length === 0){
-        grid.innerHTML = `<div class="empty">Artikel tidak ditemukan</div>`;
-        loadMoreBtn.style.display = 'none';
-        return;
+    // Helper: Format judul dari slug file
+    function formatTitle(slug) {
+        return slug.replace(/-/g, ' ')
+                   .replace(/\b\w/g, l => l.toUpperCase());
     }
 
-    visible.forEach(file => {
-        const slug = file.name.replace('.html','');
-        const title = formatTitle(slug);
+    // Fetch data dari GitHub API
+    async function init() {
+        const grid = document.getElementById('grid');
+        try {
+            const res = await fetch(`https://api.github.com/repos/${CONFIG.username}/${CONFIG.repo}/contents/${CONFIG.path}`);
+            if (!res.ok) throw new Error('Gagal fetch');
+            const data = await res.json();
+            
+            // Simpan hanya file .html
+            articlesData = data.filter(f => f.name.endsWith('.html'));
+            filteredData = [...articlesData]; // Clone data
+            
+            renderArticles();
+        } catch (err) {
+            grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem;">
+                <p>Gagal memuat konten. Pastikan repository publik atau cek koneksi Anda.</p>
+            </div>`;
+        }
+    }
 
-        const img = `https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${PATH}/${slug}.jpg`;
+    function renderArticles() {
+        const grid = document.getElementById('grid');
+        const loadMoreBtn = document.getElementById('loadMore');
+        grid.innerHTML = '';
 
-        grid.innerHTML += `
-        <div class="card">
-            <img src="${img}" loading="lazy"
-            onerror="this.src='${PLACEHOLDER}'">
-            <div class="card-content">
-                <h3>${title}</h3>
-                <p>Pelajari ${title} secara lengkap dan mudah dipahami.</p>
-                <a class="btn" href="${PATH}/${file.name}">Baca →</a>
-            </div>
-        </div>`;
+        const slice = filteredData.slice(0, visibleCount);
+
+        if (slice.length === 0) {
+            grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem; opacity: 0.7;">
+                <h3>Artikel tidak ditemukan</h3>
+                <p>Coba gunakan kata kunci lain.</p>
+            </div>`;
+            loadMoreBtn.style.display = 'none';
+            return;
+        }
+
+        slice.forEach((file, index) => {
+            const slug = file.name.replace('.html', '');
+            const title = formatTitle(slug);
+            const imgUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repo}/main/${CONFIG.path}/${slug}.jpg`;
+
+            const card = document.createElement('article');
+            card.className = 'card';
+            card.style.animationDelay = `${index * 0.05}s`;
+            card.innerHTML = `
+                <div class="card-img-wrapper">
+                    <img src="${imgUrl}" alt="${title}" loading="lazy" onerror="this.src='${CONFIG.placeholder}'">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Edukasi</span>
+                    <h3>${title}</h3>
+                    <p>Informasi terbaru mengenai ${title} untuk mendukung kegiatan belajar Anda di PKBM.</p>
+                    <a href="${CONFIG.path}/${file.name}" class="btn-read">Baca Selengkapnya ➜</a>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+
+        loadMoreBtn.style.display = visibleCount < filteredData.length ? 'inline-block' : 'none';
+    }
+
+    // Search Logic (Debounced & Non-Destructive)
+    let searchTimeout;
+    document.getElementById('search').addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            const query = e.target.value.toLowerCase();
+            filteredData = articlesData.filter(a => 
+                a.name.toLowerCase().includes(query)
+            );
+            visibleCount = 6;
+            renderArticles();
+        }, 300);
     });
 
-    loadMoreBtn.style.display = visibleCount < allArticles.length ? 'block' : 'none';
-}
-
-// load more
-document.getElementById('loadMore').onclick = () => {
-    visibleCount += 6;
-    renderArticles();
-};
-
-// debounce search
-let timeout;
-document.getElementById('search').addEventListener('input', function(){
-    clearTimeout(timeout);
-    timeout = setTimeout(()=>{
-        const keyword = this.value.toLowerCase();
-
-        allArticles = allArticles.filter(a => a.name.toLowerCase().includes(keyword));
-        visibleCount = 6;
+    // Load More
+    document.getElementById('loadMore').onclick = () => {
+        visibleCount += 6;
         renderArticles();
-    },300);
-});
+    };
 
-// dark mode
-function toggleDark(){
-    document.body.classList.toggle('dark');
-}
+    // Dark Mode Toggle
+    function toggleDark() {
+        const isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeUI(isDark);
+    }
 
-window.onload = loadArticles;
+    function updateThemeUI(isDark) {
+        document.getElementById('mode-icon').innerText = isDark ? '☀️' : '🌙';
+        document.getElementById('mode-text').innerText = isDark ? 'Terang' : 'Gelap';
+    }
+
+    // Init Theme & App
+    window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark');
+            updateThemeUI(true);
+        }
+        init();
+    };
 </script>
 
 </body>
