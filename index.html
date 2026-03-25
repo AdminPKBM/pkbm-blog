@@ -183,7 +183,7 @@
             animation: fadeIn 0.5s ease forwards;
         }
         .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-        .card-img-wrapper { position: relative; aspect-ratio: 16/9; overflow: hidden; }
+        .card-img-wrapper { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--border); }
         .card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
         .card:hover img { transform: scale(1.05); }
         .card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
@@ -356,7 +356,6 @@
         repo: 'pkbm-blog',
         path: 'artikel',     // Folder tempat file .html berada
         imgPath: 'img',      // Folder tempat gambar .png berada
-        // Perbaikan ekstensi .png pada URL placeholder agar browser langsung membaca ini sebagai gambar
         placeholder: "https://placehold.co/600x400/2563eb/ffffff.png?text=PKBM+Digital"
     };
 
@@ -406,8 +405,8 @@
             const slug = file.name.replace('.html', '');
             const title = formatTitle(slug);
             
-            // PERBAIKAN: Menggunakan encodeURI agar spasi dan karakter khusus aman tanpa merusak struktur URL
-            const safeSlug = encodeURI(slug);
+            // PERBAIKAN: Menggunakan encodeURIComponent karena lebih aman memproses seluruh karakter spesial pada nama file di URL.
+            const safeSlug = encodeURIComponent(slug);
             const imgUrl = `https://raw.githubusercontent.com/${CONFIG.username}/${CONFIG.repo}/main/${CONFIG.imgPath}/${safeSlug}.png`;
 
             const card = document.createElement('article');
