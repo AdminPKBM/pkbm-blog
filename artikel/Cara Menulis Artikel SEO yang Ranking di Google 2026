@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cara menulis artikel SEO yang ranking di Google 2026: strategi keyword, struktur konten, teknik penulisan, dan tips agar cepat masuk halaman 1.">
+    <meta name="keywords" content="Artikel SEO, Cara Menulis SEO, Ranking Google, SEO 2026, Konten SEO">
+    <title>Cara Menulis Artikel SEO yang Ranking di Google 2026</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.7;
+        }
+
+        .container { max-width: 800px; margin: auto; padding: 2rem; }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        h1 { font-size: 2rem; }
+        h2 { margin-top: 2rem; }
+        h3 { margin-top: 1.5rem; }
+
+        .meta {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        ul { padding-left: 1.5rem; }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <article class="card">
+
+        <h1>Cara Menulis Artikel SEO yang Ranking di Google 2026</h1>
+
+        <div class="meta">
+            ✍️ Tim PKBM Digital | 📅 Update 2026
+        </div>
+
+        <p>Menulis artikel SEO bukan hanya soal menulis panjang, tetapi bagaimana membuat konten yang <strong>disukai Google dan pembaca</strong>.</p>
+
+        <p>Jika dilakukan dengan benar, artikel Anda bisa masuk halaman 1 bahkan tanpa backlink.</p>
+
+        <hr>
+
+        <h2>1. Riset Keyword (Fondasi Utama)</h2>
+
+        <p>Tanpa keyword yang tepat, artikel sulit ranking.</p>
+
+        <h3>Cara riset keyword:</h3>
+        <ul>
+            <li>Gunakan Google Suggest</li>
+            <li>Lihat “People Also Ask”</li>
+            <li>Gunakan tools (Ubersuggest, Ahrefs)</li>
+        </ul>
+
+        <p><strong>Pilih keyword:</strong></p>
+        <ul>
+            <li>Volume cukup</li>
+            <li>Persaingan rendah</li>
+            <li>Sesuai intent</li>
+        </ul>
+
+        <hr>
+
+        <h2>2. Pahami Search Intent</h2>
+
+        <p>Google memprioritaskan artikel yang sesuai kebutuhan pengguna.</p>
+
+        <ul>
+            <li>Informational → artikel panduan</li>
+            <li>Navigational → brand/website</li>
+            <li>Transactional → jualan</li>
+        </ul>
+
+        <p><strong>Tips:</strong> Sesuaikan gaya artikel dengan intent.</p>
+
+        <hr>
+
+        <h2>3. Struktur Artikel SEO</h2>
+
+        <ul>
+            <li>Judul (H1) mengandung keyword</li>
+            <li>Paragraf pembuka menarik</li>
+            <li>Subjudul (H2, H3)</li>
+            <li>Bullet point (mudah dibaca)</li>
+        </ul>
+
+        <p><strong>Contoh:</strong></p>
+        <ul>
+            <li>H1: Cara Menulis Artikel SEO</li>
+            <li>H2: Riset Keyword</li>
+            <li>H3: Tools Riset</li>
+        </ul>
+
+        <hr>
+
+        <h2>4. Optimasi On-Page SEO</h2>
+
+        <ul>
+            <li>Keyword di judul</li>
+            <li>Keyword di 100 kata pertama</li>
+            <li>Gunakan sinonim (LSI)</li>
+            <li>Internal link</li>
+            <li>Meta description menarik</li>
+        </ul>
+
+        <hr>
+
+        <h2>5. Tulis Konten Berkualitas (Bukan Copy Paste)</h2>
+
+        <ul>
+            <li>Original</li>
+            <li>Lengkap (lebih baik dari kompetitor)</li>
+            <li>Mudah dipahami</li>
+        </ul>
+
+        <p><strong>Rule:</strong> Artikel terbaik = ranking terbaik.</p>
+
+        <hr>
+
+        <h2>6. Gunakan Teknik SEO 2026</h2>
+
+        <ul>
+            <li>Topical authority</li>
+            <li>Cluster artikel</li>
+            <li>Konten panjang (1000–2000 kata)</li>
+        </ul>
+
+        <hr>
+
+        <h2>7. Optimasi CTR (Click Through Rate)</h2>
+
+        <p>Judul harus menarik agar diklik.</p>
+
+        <ul>
+            <li>Gunakan angka</li>
+            <li>Gunakan kata kuat (Terbukti, Lengkap, Rahasia)</li>
+            <li>Tambahkan tahun (2026)</li>
+        </ul>
+
+        <hr>
+
+        <h2>8. Konsistensi Publish</h2>
+
+        <p>Google suka website yang aktif.</p>
+
+        <ul>
+            <li>2–3 artikel per minggu</li>
+        </ul>
+
+        <hr>
+
+        <h2>Kesimpulan</h2>
+
+        <p>Artikel SEO yang ranking adalah kombinasi antara strategi dan kualitas.</p>
+
+        <p><strong>Kunci sukses:</strong></p>
+        <ul>
+            <li>Keyword tepat</li>
+            <li>Konten berkualitas</li>
+            <li>Optimasi SEO</li>
+        </ul>
+
+        <p><strong>Jika konsisten, artikel Anda bisa masuk halaman 1 Google.</strong></p>
+
+    </article>
+</div>
+
+</body>
+</html>
