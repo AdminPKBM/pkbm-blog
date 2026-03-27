@@ -484,6 +484,26 @@
         init();
     };
 </script>
+<script>
+(function() {
+    const sitemapURL = "https://pkbmcelahcahaya.edu.eu.org/sitemap.xml";
 
+    function pingSearchEngines() {
+        const engines = [
+            "https://www.google.com/ping?sitemap=",
+            "https://www.bing.com/ping?sitemap="
+        ];
+
+        engines.forEach(engine => {
+            fetch(engine + encodeURIComponent(sitemapURL))
+                .then(() => console.log("Ping success:", engine))
+                .catch(() => console.log("Ping failed:", engine));
+        });
+    }
+
+    // Jalankan saat pertama load
+    pingSearchEngines();
+})();
+</script>
 </body>
 </html>
