@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -12,21 +14,53 @@
     <meta property="og:title" content="Cara Buat Konten AI Viral di 2026 (Panduan Lengkap)">
     <meta property="og:description" content="Bongkar rahasia membuat video pendek viral menggunakan bantuan Artificial Intelligence tanpa perlu tampil di depan kamera.">
     <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Cara%20Buat%20Konten%20AI%20Viral%202026%3A%20Strategi%20%26%20Tools%20Lengkap.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        /* Global & Theme Variables */
         :root {
             --primary: #8b5cf6; /* Warna ungu identik dengan AI/Tech */
+            --primary-hover: #7c3aed;
             --bg: #f8fafc;
             --card: #ffffff;
             --text-main: #0f172a;
             --text-muted: #64748b;
             --border: #e2e8f0;
-            --accent: #0ea5e9; 
+            --glass: rgba(255, 255, 255, 0.85);
+            
+            /* Custom Article Box Colors (Light) */
+            --info-bg: #f5f3ff;
+            --info-text: #4c1d95;
+            --alert-bg: #fff1f2;
+            --alert-text: #be123c;
+            --cta-bg: #f0f9ff;
+            --cta-border: #bae6fd;
+            --cta-text: #0369a1;
         }
+
+        .dark {
+            --bg: #020617;
+            --card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --glass: rgba(30, 41, 59, 0.85);
+            
+            /* Custom Article Box Colors (Dark) */
+            --info-bg: rgba(139, 92, 246, 0.15);
+            --info-text: #c4b5fd;
+            --alert-bg: rgba(225, 29, 72, 0.15);
+            --alert-text: #fda4af;
+            --cta-bg: #0f172a;
+            --cta-border: #334155;
+            --cta-text: #7dd3fc;
+        }
+
+        * { box-sizing: border-box; transition: background 0.3s, border 0.3s, color 0.3s; }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -36,8 +70,30 @@
             line-height: 1.7;
         }
 
-        .container { max-width: 850px; margin: auto; padding: 2rem 1.5rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .article-container { max-width: 850px; margin: 3rem auto; }
 
+        /* Header Styles */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; background: linear-gradient(45deg, var(--primary), #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        .header-actions { display: flex; align-items: center; gap: 1rem; }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0; }
+        .toggle-mode { background: var(--border); border: none; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; font-weight: 600; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem; }
+
+        /* Article Specific Styles */
         .card {
             background: var(--card);
             border-radius: 20px;
@@ -46,19 +102,12 @@
             box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
         }
 
-        h1 { font-size: 2.4rem; line-height: 1.3; margin-top: 0; color: #0f172a; }
-        h2 { margin-top: 2.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; color: #1e293b; }
-        h3 { margin-top: 1.8rem; color: #334155; }
+        h1 { font-size: 2.4rem; line-height: 1.3; margin-top: 0; color: var(--text-main); }
+        h2 { margin-top: 2.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; color: var(--text-main); }
+        h3 { margin-top: 1.8rem; color: var(--text-main); }
         
-        .meta {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
+        .meta { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        
         figure { margin: 2rem 0; text-align: center; }
         img { max-width: 100%; height: auto; border-radius: 12px; }
         figcaption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; font-style: italic; }
@@ -66,46 +115,64 @@
         ul, ol { padding-left: 1.5rem; margin-bottom: 1.5rem; }
         li { margin-bottom: 0.5rem; }
         p { margin-bottom: 1.2rem; }
+        hr { border: 0; height: 1px; background: var(--border); margin: 2.5rem 0; }
+        strong { color: var(--text-main); }
+        a.text-link { color: var(--primary); text-decoration: none; font-weight: 600; }
+        a.text-link:hover { text-decoration: underline; }
 
         /* Custom Callouts */
-        .info-box {
-            background: #f5f3ff;
-            padding: 1.2rem 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-            border-left: 4px solid var(--primary);
-            color: #4c1d95;
+        .info-box { background: var(--info-bg); padding: 1.2rem 1.5rem; border-radius: 10px; margin: 1.5rem 0; border-left: 4px solid var(--primary); color: var(--info-text); }
+        .alert-box { background: var(--alert-bg); padding: 1.2rem 1.5rem; border-radius: 10px; margin: 1.5rem 0; border-left: 4px solid #e11d48; color: var(--alert-text); }
+        .cta { background: var(--cta-bg); padding: 1.8rem; border-radius: 12px; margin: 2.5rem 0; border: 1px solid var(--cta-border); text-align: center; }
+        .cta h3 { margin-top: 0; color: var(--cta-text); }
+
+        /* Ads Container */
+        .ad-container { text-align: center; margin: 2.5rem auto; padding: 1rem 0; max-width: 100%; overflow: hidden; background: var(--card); border: 1px dashed var(--border); border-radius: 10px; }
+        .ad-label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Footer */
+        footer { background: var(--card); border-top: 1px solid var(--border); padding: 3rem 0; margin-top: 4rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { margin-top: 0; color: var(--text-main); }
+        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .mobile-toggle { display: block; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--card); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
+            h1 { font-size: 1.8rem; }
+            .card { padding: 1.5rem; }
         }
-
-        .alert-box {
-            background: #fff1f2;
-            padding: 1.2rem 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-            border-left: 4px solid #e11d48;
-            color: #be123c;
-        }
-
-        .cta {
-            background: #f0f9ff;
-            padding: 1.8rem;
-            border-radius: 12px;
-            margin: 2.5rem 0;
-            border: 1px solid #bae6fd;
-            text-align: center;
-        }
-
-        .cta h3 { margin-top: 0; color: #0369a1; }
-
-        strong { color: #0f172a; }
-        a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; }
     </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <div class="container nav-wrapper">
+        <a href="../index.html" class="logo">PKBM Digital</a>
+        
+        <nav class="nav-links" id="nav-menu">
+            <a href="../index.html">Beranda</a>
+            <a href="../about.html">Tentang Kami</a>
+            <a href="../contact.html">Kontak</a>
+            <a href="../privasi.html">Privacy Policy</a>
+            <a href="../disclaimer.html">Disclaimer</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="toggle-mode" onclick="toggleDark()" aria-label="Ganti Tema">
+                <span id="mode-icon">🌙</span> <span id="mode-text">Gelap</span>
+            </button>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Buka Menu">☰</button>
+        </div>
+    </div>
+</header>
+
+<main class="container article-container">
     <article class="card">
 
         <h1>🤖 Cara Buat Konten AI Viral 2026: Strategi & Tools Lengkap</h1>
@@ -122,14 +189,27 @@
             <figcaption>Teknologi AI memungkinkan siapa saja menjadi konten kreator (Faceless Creator) tanpa perlu menampilkan wajah atau merekam suara sendiri.</figcaption>
         </figure>
 
-        <p>Di tahun 2026, memproduksi video tidak lagi membutuhkan kru kamera, *lighting* mahal, atau *skill editing* tingkat dewa. Dengan <strong>Artificial Intelligence (AI)</strong>, ide di kepala Anda bisa berubah menjadi video TikTok, Reels, atau YouTube Shorts berkualitas tinggi hanya dalam hitungan menit.</p>
+        <p>Di tahun 2026, memproduksi video tidak lagi membutuhkan kru kamera, <em>lighting</em> mahal, atau <em>skill editing</em> tingkat dewa. Dengan <strong>Artificial Intelligence (AI)</strong>, ide di kepala Anda bisa berubah menjadi video TikTok, Reels, atau YouTube Shorts berkualitas tinggi hanya dalam hitungan menit.</p>
 
-        <p>Fenomena <em>Faceless Channel</em> (akun tanpa wajah) yang dikelola sepenuhnya dengan AI kini merajai algoritma. Namun, karena semua orang kini menggunakan AI, asal *generate* saja tidak akan membuat Anda viral. Anda butuh <strong>strategi yang tepat</strong> dan pemahaman tentang *tools* terbaik.</p>
+        <p>Fenomena <em>Faceless Channel</em> (akun tanpa wajah) yang dikelola sepenuhnya dengan AI kini merajai algoritma. Namun, karena semua orang kini menggunakan AI, asal <em>generate</em> saja tidak akan membuat Anda viral. Anda butuh <strong>strategi yang tepat</strong> dan pemahaman tentang <em>tools</em> terbaik.</p>
+
+        <div class="ad-container">
+            <span class="ad-label">- Advertisement -</span>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4454451699877502"
+                 data-ad-slot="GANTI_DENGAN_SLOT_ANDA"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
 
         <hr>
 
         <h2>🛠️ Rekomendasi "AI Tools Stack" Terbaik (Update 2026)</h2>
-        <p>Untuk membuat satu konten utuh, Anda biasanya membutuhkan kombinasi dari beberapa *tools* berikut:</p>
+        <p>Untuk membuat satu konten utuh, Anda biasanya membutuhkan kombinasi dari beberapa <em>tools</em> berikut:</p>
 
         <ul>
             <li><strong>AI Pembuat Naskah (Ide & Script):</strong> Gemini, ChatGPT, atau Claude. Gunakan untuk mencari ide topik viral dan menyusun naskah yang menarik.</li>
@@ -143,7 +223,7 @@
         <h2>🚀 5 Langkah Jitu Membuat Konten AI yang FYP</h2>
 
         <h3>1. Pilih Niche yang Memancing Rasa Ingin Tahu</h3>
-        <p>Algoritma menyukai konten yang membuat orang menonton sampai habis. Pilih satu topik spesifik (*niche*) yang selalu dicari orang:</p>
+        <p>Algoritma menyukai konten yang membuat orang menonton sampai habis. Pilih satu topik spesifik (<em>niche</em>) yang selalu dicari orang:</p>
         <ul>
             <li>Fakta misteri dunia / sejarah yang disembunyikan.</li>
             <li>Psikologi manusia & trik manipulasi pikiran.</li>
@@ -171,13 +251,24 @@
         <div class="alert-box">
             <h3>⚠️ Kesalahan Fatal Kreator AI Pemula</h3>
             <ul>
-                <li><strong>Terlalu Terlihat Seperti Robot:</strong> Membiarkan suara AI membaca *script* yang kaku (seperti bahasa Wikipedia) tanpa diedit sedikit pun. Manusia benci menonton video yang "tidak punya jiwa".</li>
+                <li><strong>Terlalu Terlihat Seperti Robot:</strong> Membiarkan suara AI membaca <em>script</em> yang kaku (seperti bahasa Wikipedia) tanpa diedit sedikit pun. Manusia benci menonton video yang "tidak punya jiwa".</li>
                 <li><strong>Gambar Tidak Nyambung:</strong> Audio sedang membahas "laut", tapi visual yang ditampilkan adalah "gunung". Sinkronisasi audio dan visual sangat penting!</li>
-                <li><strong>Malas Riset Tren:</strong> Hanya membuat konten yang Anda suka, bukan konten yang sedang ramai dibicarakan (*trending*) di platform tersebut.</li>
+                <li><strong>Malas Riset Tren:</strong> Hanya membuat konten yang Anda suka, bukan konten yang sedang ramai dibicarakan (<em>trending</em>) di platform tersebut.</li>
             </ul>
         </div>
 
-        <hr>
+        <div class="ad-container">
+            <span class="ad-label">- Advertisement -</span>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4454451699877502"
+                 data-ad-slot="GANTI_DENGAN_SLOT_ANDA"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
 
         <div class="cta">
             <h3>Waktunya Praktik!</h3>
@@ -185,7 +276,61 @@
         </div>
 
     </article>
-</div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Tentang PKBM Digital</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Portal independen yang menyediakan informasi seputar pendidikan nonformal, Kejar Paket A, B, C, serta panduan belajar mandiri untuk masyarakat Indonesia.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <a href="../index.html">Beranda</a>
+                <a href="../about.html">Tentang Kami</a>
+                <a href="../contact.html">Hubungi Kami</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Kebijakan</h4>
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../disclaimer.html">Disclaimer</a>
+                <a href="../sitemap.xml">Sitemap</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PKBM Digital. Dibuat dengan dedikasi untuk pendidikan Indonesia.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Toggle Dark Mode
+    function toggleDark() {
+        const isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeUI(isDark);
+    }
+
+    function updateThemeUI(isDark) {
+        document.getElementById('mode-icon').innerText = isDark ? '☀️' : '🌙';
+        document.getElementById('mode-text').innerText = isDark ? 'Terang' : 'Gelap';
+    }
+
+    // Toggle Mobile Menu
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+
+    // Cek LocalStorage untuk Tema Saat Load
+    window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark');
+            updateThemeUI(true);
+        }
+    };
+</script>
 
 </body>
 </html>
