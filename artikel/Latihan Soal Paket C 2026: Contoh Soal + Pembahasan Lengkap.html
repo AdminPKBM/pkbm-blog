@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Latihan soal Paket C lengkap 2026: contoh soal numerasi, literasi, pembahasan, dan strategi cepat lulus ujian kesetaraan PKBM.">
-    <meta name="keywords" content="Latihan Soal Paket C, Soal Paket C 2026, Contoh Soal PKBM, Ujian Kesetaraan, Latihan Numerasi Literasi">
+    <meta name="keywords" content="Latihan Soal Paket C, Soal Paket C 2026, Contoh Soal PKBM, Ujian Kesetaraan, Latihan Numerasi Literasi, AKM Paket C">
     <title>Latihan Soal Paket C 2026: Contoh Soal + Pembahasan Lengkap</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,17 +23,8 @@
             --glass: rgba(255, 255, 255, 0.85);
         }
 
-        .dark {
-            --bg: #020617;
-            --card: #1e293b;
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --border: #334155;
-            --glass: rgba(30, 41, 59, 0.85);
-        }
-
+        /* Struktur Dasar */
         * { box-sizing: border-box; transition: 0.3s; }
-
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             margin: 0;
@@ -41,54 +32,59 @@
             color: var(--text-main);
             line-height: 1.7;
         }
-
         .container { max-width: 1100px; margin: auto; padding: 0 1.5rem; }
 
+        /* Navigasi */
         header {
             position: sticky; top: 0;
             background: var(--glass);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             padding: 1rem 0;
+            z-index: 10;
         }
-
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.4rem; color: var(--primary); text-decoration: none; }
 
-        .logo {
-            font-weight: 700;
-            font-size: 1.4rem;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
+        /* Area Artikel */
         .article-wrapper { max-width: 800px; margin: 3rem auto; }
-
         .card {
             background: var(--card);
             border-radius: 20px;
             padding: 2.5rem;
             border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
-        h1 { font-size: 2rem; }
-        h2 { margin-top: 2rem; }
-        h3 { margin-top: 1.5rem; }
-
-        .article-meta {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
+        /* Tipografi */
+        h1 { font-size: 2.2rem; line-height: 1.3; margin-top: 0; color: #0f172a; }
+        h2 { margin-top: 2.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; color: #1e293b; }
+        h3 { margin-top: 1.8rem; color: #334155; }
+        h4 { margin-top: 1rem; color: #475569; font-weight: 600; }
+        p { margin-bottom: 1rem; }
+        ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        blockquote {
+            border-left: 4px solid var(--primary);
+            margin: 1.5rem 0;
+            padding: 0.5rem 1.5rem;
+            background: #eff6ff;
+            color: #1e3a8a;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
         }
 
-        ul { padding-left: 1.5rem; }
+        /* Elemen Spesifik */
+        .article-meta { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem; display: flex; gap: 1rem; align-items: center;}
+        figure { margin: 2rem 0; text-align: center; }
+        img { max-width: 100%; height: auto; border-radius: 12px; }
+        figcaption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; }
+        
+        .tip { background: #fffbeb; padding: 1.2rem; border-radius: 10px; margin: 1.5rem 0; border-left: 4px solid #f59e0b; font-weight: 500; }
+        .pembahasan { background: #f1f5f9; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; border: 1px solid var(--border); }
+        .cta { background: #eff6ff; padding: 1.5rem; border-radius: 10px; margin: 2rem 0; border: 1px solid #bfdbfe; text-align: center; }
 
-        footer {
-            margin-top: 3rem;
-            padding: 2rem 0;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            color: var(--text-muted);
-        }
+        footer { margin-top: 3rem; padding: 2rem 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); }
     </style>
 </head>
 
@@ -96,112 +92,142 @@
 
 <header>
     <div class="container nav-wrapper">
-        <a href="#" class="logo">PKBM Digital</a>
+        <a href="/" class="logo">PKBM Digital</a>
     </div>
 </header>
 
 <main class="container article-wrapper">
     <article class="card">
 
-        <h1>Latihan Soal Paket C 2026: Contoh Soal + Pembahasan Lengkap</h1>
-
+        <h1>Latihan Soal Paket C 2026: Contoh Soal AKM + Pembahasan Lengkap</h1>
+        
         <div class="article-meta">
-            ✍️ Konselor PKBM | 📅 Update 2026
+            <span>✍️ Konselor Akademik PKBM</span>
+            <span>📅 Update Kurikulum 2026</span>
         </div>
 
-        <p><strong>Latihan soal Paket C</strong> adalah kunci utama untuk lulus ujian kesetaraan. Semakin sering Anda berlatih, semakin besar peluang memahami pola soal dan meningkatkan nilai.</p>
+        <figure>
+            <img src="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Latihan%20Soal%20Paket%20C%202026%20Contoh%20Soal%20%2B%20Pembahasan%20Lengkap.png" 
+                 alt="Ilustrasi warga belajar mengerjakan latihan soal ujian Paket C"
+                 onerror="this.src='https://placehold.co/800x450/2563eb/ffffff.png?text=Ilustrasi+Latihan+Soal+Paket+C'">
+            <figcaption>Persiapkan diri Anda menghadapi Ujian Kesetaraan dengan latihan soal terarah.</figcaption>
+        </figure>
+
+        <p>Menghadapi Ujian Pendidikan Kesetaraan (UPK) atau Asesmen Nasional bagi warga belajar Paket C seringkali memicu rasa gugup. Apalagi jika Anda sudah bertahun-tahun meninggalkan bangku sekolah formal dan kini sibuk bekerja.</p>
+
+        <p>Namun, jangan khawatir! Ujian kesetaraan tahun 2026 sangat berfokus pada <strong>AKM (Asesmen Kompetensi Minimum)</strong>. Artinya, soal tidak lagi sekadar hafalan murni, melainkan menguji kemampuan bernalar Anda melalui <strong>Numerasi (Logika Matematika Dasar)</strong> dan <strong>Literasi (Pemahaman Membaca)</strong>.</p>
+
+        <div class="tip">
+            💡 <strong>Kunci Sukses:</strong> Semakin sering Anda membiasakan diri dengan format soal berbasis penalaran, semakin mudah Anda menemukan jawaban yang tepat tanpa harus menghafal rumus rumit.
+        </div>
 
         <hr>
 
-        <h2>Kenapa Latihan Soal Itu Penting?</h2>
+        <h2>Kenapa Latihan Soal Jauh Lebih Penting daripada Menghafal Modul?</h2>
         <ul>
-            <li>Memahami pola soal yang sering keluar</li>
-            <li>Melatih kecepatan dan ketepatan</li>
-            <li>Mengurangi rasa gugup saat ujian</li>
-            <li>Mengetahui kelemahan diri</li>
+            <li><strong>Mengenali Pola Jebakan:</strong> Soal ujian sering memiliki pilihan ganda yang mirip. Latihan rutin melatih mata Anda melihat "jebakan" tersebut.</li>
+            <li><strong>Manajemen Waktu:</strong> Mengurangi risiko kehabisan waktu saat ujian sesungguhnya karena Anda sudah terbiasa dengan ritme membaca soal panjang.</li>
+            <li><strong>Membangun Insting:</strong> Pada soal HOTS (Higher Order Thinking Skills), latihan akan menajamkan insting Anda dalam menyimpulkan informasi.</li>
         </ul>
 
         <hr>
 
-        <h2>Contoh Latihan Soal Numerasi</h2>
+        <h2>Bagian 1: Latihan Soal Numerasi (Logika Angka)</h2>
+        <p>Soal numerasi tidak menuntut Anda menjadi ahli matematika, melainkan menguji bagaimana Anda menggunakan angka untuk memecahkan masalah sehari-hari.</p>
 
-        <h3>Soal 1</h3>
-        <p>Jika harga sebuah barang Rp200.000 mendapat diskon 25%, berapa harga setelah diskon?</p>
+        <h3>Soal 1: Aritmatika Sosial (Diskon & Harga)</h3>
+        <p>Pak Budi ingin membeli sebuah seragam kerja di toko pakaian. Harga awal seragam tersebut adalah Rp200.000. Toko tersebut sedang mengadakan promo akhir tahun dan memberikan diskon sebesar 25%. Berapa total uang yang harus dibayarkan oleh Pak Budi di kasir?</p>
+        
+        <div class="pembahasan">
+            <h4>Jawaban & Pembahasan:</h4>
+            <p><strong>Langkah 1:</strong> Hitung besar potongan harga (diskon).<br>
+            Diskon = 25% dari Rp200.000<br>
+            Diskon = (25 / 100) × 200.000 = Rp50.000</p>
+            
+            <p><strong>Langkah 2:</strong> Kurangi harga awal dengan potongan harga.<br>
+            Harga akhir = Rp200.000 - Rp50.000 = Rp150.000</p>
+            
+            <p><strong>Jawaban Benar: Rp150.000</strong></p>
+        </div>
 
-        <h4>Pembahasan:</h4>
-        <p>Diskon = 25% × 200.000 = 50.000</p>
-        <p>Harga akhir = 200.000 - 50.000 = <strong>150.000</strong></p>
+        <h3>Soal 2: Persentase dan Proporsi</h3>
+        <p>Dalam sebuah kelompok belajar PKBM kelas 12, terdapat total 20 warga belajar. Jika diketahui 12 orang di antaranya adalah laki-laki, berapakah persentase warga belajar perempuan di kelas tersebut?</p>
 
-        <p><strong>Jawaban: Rp150.000</strong></p>
+        <div class="pembahasan">
+            <h4>Jawaban & Pembahasan:</h4>
+            <p><strong>Langkah 1:</strong> Cari tahu jumlah perempuan.<br>
+            Jumlah perempuan = Total siswa - Siswa laki-laki<br>
+            Jumlah perempuan = 20 - 12 = 8 orang</p>
 
-        <hr>
+            <p><strong>Langkah 2:</strong> Ubah menjadi persentase.<br>
+            Rumus: (Jumlah perempuan / Total siswa) × 100%<br>
+            Persentase = (8 / 20) × 100%<br>
+            Persentase = 0,4 × 100% = 40%</p>
 
-        <h3>Soal 2</h3>
-        <p>Sebuah kelas memiliki 20 siswa. 12 siswa laki-laki. Berapa persentase siswa perempuan?</p>
-
-        <h4>Pembahasan:</h4>
-        <p>Perempuan = 20 - 12 = 8</p>
-        <p>Persentase = (8/20) × 100% = 40%</p>
-
-        <p><strong>Jawaban: 40%</strong></p>
-
-        <hr>
-
-        <h2>Contoh Latihan Soal Literasi</h2>
-
-        <h3>Soal 3</h3>
-        <p>Bacalah kalimat berikut:</p>
-        <blockquote>"Pendidikan adalah kunci untuk membuka masa depan yang lebih baik."</blockquote>
-        <p>Apa makna dari kalimat tersebut?</p>
-
-        <h4>Pembahasan:</h4>
-        <p>Pendidikan membantu seseorang meraih kehidupan yang lebih baik.</p>
-
-        <p><strong>Jawaban: Pendidikan menentukan masa depan seseorang</strong></p>
-
-        <hr>
-
-        <h2>Contoh Soal Penalaran (HOTS)</h2>
-
-        <h3>Soal 4</h3>
-        <p>Semua siswa PKBM rajin belajar. Andi adalah siswa PKBM. Maka…</p>
-
-        <h4>Pembahasan:</h4>
-        <p>Kesimpulan logis: Andi rajin belajar.</p>
-
-        <p><strong>Jawaban: Andi rajin belajar</strong></p>
+            <p><strong>Jawaban Benar: 40%</strong></p>
+        </div>
 
         <hr>
 
-        <h2>Strategi Maksimal Saat Latihan Soal</h2>
+        <h2>Bagian 2: Latihan Soal Literasi (Pemahaman Teks)</h2>
+        <p>Bacalah teks dengan cermat, karena jawaban seringkali tidak tertulis secara langsung, melainkan tersirat.</p>
+
+        <h3>Soal 3: Menentukan Ide Pokok</h3>
+        <p>Bacalah kutipan paragraf berikut:</p>
+        <blockquote>"Pendidikan kesetaraan bukan sekadar jalan pintas mendapatkan ijazah, melainkan sarana untuk mengembalikan hak belajar masyarakat yang sempat terputus. Melalui kurikulum yang disesuaikan dengan kebutuhan orang dewasa, pendidikan ini adalah kunci untuk membuka peluang karir dan masa depan yang lebih baik di era digital."</blockquote>
+        <p>Berdasarkan teks di atas, apa tujuan utama dari pendidikan kesetaraan?</p>
+
+        <div class="pembahasan">
+            <h4>Jawaban & Pembahasan:</h4>
+            <p>Teks tersebut menekankan dua hal: mengembalikan hak belajar dan membuka peluang karir/masa depan. Pernyataan bahwa kesetaraan "bukan sekadar jalan pintas mendapatkan ijazah" menggugurkan opsi jawaban yang hanya berfokus pada selembar kertas ijazah.</p>
+            <p><strong>Jawaban Benar: Memberikan hak belajar dan membekali peserta untuk meraih masa depan dan peluang karir yang lebih baik.</strong></p>
+        </div>
+
+        <hr>
+
+        <h2>Bagian 3: Soal Penalaran Logis (HOTS)</h2>
+
+        <h3>Soal 4: Silogisme Dasar</h3>
+        <p>Perhatikan dua premis (pernyataan) berikut ini:<br>
+        1. Semua warga belajar PKBM yang memenuhi syarat kehadiran diizinkan mengikuti ujian akhir.<br>
+        2. Andi adalah warga belajar PKBM, namun kehadirannya di bawah syarat minimum.</p>
+        <p>Kesimpulan yang paling tepat dari dua pernyataan di atas adalah...</p>
+
+        <div class="pembahasan">
+            <h4>Jawaban & Pembahasan:</h4>
+            <p>Gunakan logika silogisme (sebab-akibat mutlak). Syarat ikut ujian = memenuhi syarat kehadiran. Andi = TIDAK memenuhi syarat kehadiran. Maka, akibatnya Andi tidak memenuhi syarat (gagal) untuk ikut ujian.</p>
+            <p><strong>Jawaban Benar: Andi tidak diizinkan mengikuti ujian akhir.</strong></p>
+        </div>
+
+        <hr>
+
+        <h2>Strategi Maksimal Saat Mengerjakan Latihan Soal di Rumah</h2>
         <ul>
-            <li>Kerjakan soal tanpa melihat jawaban</li>
-            <li>Gunakan timer</li>
-            <li>Catat kesalahan</li>
-            <li>Ulangi soal yang salah</li>
+            <li><strong>Terapkan Sistem <i>Try Out</i> Mandiri:</strong> Kerjakan 20 soal tanpa melihat kunci jawaban sama sekali. Anggap Anda sedang berada di ruang ujian nyata.</li>
+            <li><strong>Gunakan Timer (Pengukur Waktu):</strong> Targetkan maksimal 2-3 menit untuk 1 soal. Jika buntu, tinggalkan dan lanjut ke soal berikutnya.</li>
+            <li><strong>Bedah Kesalahan Anda:</strong> Jangan sekadar menghitung skor "Benar berapa, Salah berapa". Fokuslah pada soal yang salah: <i>"Kenapa saya salah menjawab ini? Apa rumus atau logika yang terlewat?"</i></li>
         </ul>
 
         <hr>
 
-        <h2>Target Latihan Ideal</h2>
+        <h2>Target Latihan Ideal untuk Pekerja</h2>
+        <p>Jika Anda sibuk bekerja, jangan memaksakan diri belajar berjam-jam. Gunakan metode yang terukur:</p>
         <ul>
-            <li>20–50 soal per hari</li>
-            <li>1 try out per minggu</li>
-            <li>Fokus pada soal yang sulit</li>
+            <li><strong>Hari Kerja (Senin-Jumat):</strong> Kerjakan 10–15 soal pilihan ganda setiap malam. Ini hanya memakan waktu sekitar 30 menit.</li>
+            <li><strong>Akhir Pekan (Sabtu/Minggu):</strong> Lakukan simulasi Try Out kecil-kecilan (40-50 soal) untuk melatih ketahanan duduk dan berpikir.</li>
         </ul>
 
-        <hr>
-
-        <h2>Kesimpulan</h2>
-        <p>Latihan soal bukan hanya membantu memahami materi, tetapi juga meningkatkan kepercayaan diri saat ujian.</p>
-
-        <p><strong>Semakin sering latihan, semakin dekat dengan kelulusan.</strong></p>
+        <div class="cta">
+            🚀 <strong>Kesimpulan:</strong> Kelulusan Ujian Paket C tidak ditentukan oleh seberapa cerdas Anda di masa lalu, melainkan seberapa gigih Anda berlatih hari ini. Rutin berlatih = Lulus dengan tenang.
+        </div>
 
     </article>
 </main>
 
 <footer>
-    <p>&copy; 2026 PKBM Digital</p>
+    <div class="container">
+        <p>&copy; 2026 Hak Cipta PKBM Digital. Membantu Warga Belajar Meraih Masa Depan.</p>
+    </div>
 </footer>
 
 </body>
