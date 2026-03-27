@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Panduan lengkap peluang usaha digital 2026 untuk pemula. Pelajari AI Content Creator, Affiliate Marketing, Freelancer, hingga strategi cuan dari internet tanpa modal.">
     <meta name="keywords" content="usaha digital 2026, bisnis online pemula, cara menghasilkan uang dari internet, AI content creator, affiliate marketing Indonesia">
     <title>Peluang Usaha Digital 2026: Panduan Lengkap dari Nol sampai Menghasilkan</title>
 
+    <link rel="canonical" href="https://pkbmcelahcahaya.edu.eu.org/artikel/peluang-usaha-digital.html">
+    <meta property="og:title" content="Peluang Usaha Digital 2026: Panduan Lengkap dari Nol sampai Menghasilkan">
+    <meta property="og:description" content="Panduan lengkap peluang usaha digital 2026 untuk pemula. Pelajari strategi cuan dari internet tanpa modal besar.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Peluang%20Usaha%20Digital%202026:%20Panduan%20Lengkap%20dari%20Nol%20sampai%20Menghasilkan.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ================= VARIABEL & BASE ================= */
+        /* Global & Theme Variables */
         :root {
-            --primary: #2563eb;
+            --primary: #2563eb; 
             --primary-hover: #1d4ed8;
+            --accent: #8b5cf6;
             --bg: #f8fafc;
             --card: #ffffff;
             --text-main: #0f172a;
             --text-muted: #64748b;
             --border: #e2e8f0;
             --glass: rgba(255, 255, 255, 0.85);
+            
+            /* Custom Callout Colors (Light) */
+            --tip-bg: #eff6ff;
+            --tip-text: #1e3a8a;
+            --warning-bg: #fffbeb;
+            --warning-border: #f59e0b;
+            --warning-text: #92400e;
+            --box-bg: #f1f5f9;
         }
 
         .dark {
@@ -31,6 +48,13 @@
             --text-muted: #94a3b8;
             --border: #334155;
             --glass: rgba(30, 41, 59, 0.85);
+            
+            /* Custom Callout Colors (Dark) */
+            --tip-bg: rgba(37, 99, 235, 0.15);
+            --tip-text: #bfdbfe;
+            --warning-bg: rgba(245, 158, 11, 0.15);
+            --warning-text: #fde68a;
+            --box-bg: #0f172a;
         }
 
         * { box-sizing: border-box; transition: background 0.3s, border 0.3s, color 0.3s; }
@@ -44,8 +68,9 @@
         }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .article-container { max-width: 850px; margin: 3rem auto; }
 
-        /* ================= HEADER ================= */
+        /* Header Styles */
         header {
             position: sticky; top: 0; z-index: 100;
             background: var(--glass);
@@ -53,74 +78,86 @@
             border-bottom: 1px solid var(--border); padding: 1rem 0;
         }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-        .logo {
-            font-size: 1.5rem; font-weight: 700;
-            background: linear-gradient(45deg, var(--primary), #8b5cf6);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            text-decoration: none;
-        }
+        .logo { font-size: 1.5rem; font-weight: 700; background: linear-gradient(45deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
         .nav-links { display: flex; gap: 1.5rem; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; }
         .nav-links a:hover { color: var(--primary); }
         .header-actions { display: flex; align-items: center; gap: 1rem; }
         .mobile-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0; }
-        .toggle-mode {
-            background: var(--border); border: none; padding: 0.5rem 1rem;
-            border-radius: 50px; cursor: pointer; font-weight: 600;
-            color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;
-        }
+        .toggle-mode { background: var(--border); border: none; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; font-weight: 600; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem; }
 
-        /* ================= STYLING KHUSUS ARTIKEL ================= */
-        .article-wrapper {
-            max-width: 800px; /* Lebar ideal untuk membaca */
-            margin: 3rem auto;
-        }
+        /* Article Specific Styles */
         .card {
-            background: var(--card); border-radius: 20px; overflow: hidden;
-            border: 1px solid var(--border); padding: 2.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            background: var(--card); border-radius: 20px; padding: 3rem 2.5rem;
+            border: 1px solid var(--border); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
         }
-        
-        /* Tipografi Artikel */
-        .article-content h1 { font-size: 2.2rem; color: var(--text-main); line-height: 1.3; margin-top: 0; margin-bottom: 1rem; }
-        .article-content h2 { font-size: 1.6rem; color: var(--text-main); margin-top: 2.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
-        .article-content h3 { font-size: 1.3rem; color: var(--text-main); margin-top: 2rem; }
-        .article-content p { color: var(--text-main); font-size: 1.05rem; margin-bottom: 1.5rem; }
-        .article-content ul, .article-content ol { color: var(--text-main); margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.05rem; }
-        .article-content li { margin-bottom: 0.5rem; }
-        .article-content a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        .article-content a:hover { text-decoration: underline; }
-        .article-content hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
-        
-        /* Meta & Gambar */
-        .article-meta {
-            display: flex; align-items: center; gap: 1rem;
-            color: var(--text-muted); font-size: 0.9rem;
-            margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);
-        }
-        .article-content figure { margin: 2rem 0; text-align: center; }
-        .article-content img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
-        .article-content figcaption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; font-style: italic; }
 
-        /* ================= FOOTER ================= */
+        h1 { font-size: 2.2rem; line-height: 1.3; margin-top: 0; color: var(--text-main); }
+        h2 { margin-top: 2.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; color: var(--text-main); }
+        h3 { margin-top: 1.8rem; color: var(--text-main); }
+        h4 { margin-top: 1rem; color: var(--text-main); font-weight: 600; }
+        
+        .meta { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+        
+        figure { margin: 2rem 0; text-align: center; }
+        img { max-width: 100%; height: auto; border-radius: 12px; }
+        figcaption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; font-style: italic; }
+
+        ul, ol { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        p { margin-bottom: 1.2rem; }
+        hr { border: 0; height: 1px; background: var(--border); margin: 2.5rem 0; }
+        
+        strong { color: var(--text-main); }
+        a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; }
+
+        /* Custom Callouts & Boxes */
+        .tip {
+            background: var(--warning-bg);
+            color: var(--warning-text);
+            padding: 1.2rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--warning-border);
+            font-weight: 500;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary);
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--tip-bg);
+            color: var(--tip-text);
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .pembahasan { 
+            background: var(--box-bg); 
+            padding: 1.5rem; 
+            border-radius: 10px; 
+            margin-top: 1rem; 
+            border: 1px solid var(--border); 
+        }
+
+        .cta { background: var(--bg); padding: 2rem; border-radius: 12px; margin: 2.5rem 0; border: 1px solid var(--border); text-align: center; }
+
+        /* Footer */
         footer { background: var(--card); border-top: 1px solid var(--border); padding: 3rem 0; margin-top: 4rem; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
         .footer-col h4 { margin-top: 0; color: var(--text-main); }
-        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 400; }
         .footer-col a:hover { color: var(--primary); }
         .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 
-        /* Responsive Mobile */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .mobile-toggle { display: block; }
-            .nav-links {
-                display: none; position: absolute; top: 100%; left: 0; right: 0;
-                background: var(--card); flex-direction: column; padding: 1rem;
-                border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--card); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
             .nav-links.active { display: flex; }
+            h1 { font-size: 1.8rem; }
             .card { padding: 1.5rem; }
-            .article-content h1 { font-size: 1.7rem; }
         }
     </style>
 </head>
@@ -146,12 +183,12 @@
     </div>
 </header>
 
-<main class="container article-wrapper">
-    <article class="card article-content">
+<main class="container article-container">
+    <article class="card">
         
         <h1>Peluang Usaha Digital 2026: Panduan Lengkap dari Nol sampai Cuan untuk Pemula</h1>
         
-        <div class="article-meta">
+        <div class="meta">
             <span>✍️ Ditulis oleh: Tim Ekonomi Kreatif</span>
             <span>📅 Update: 25 Maret 2026</span>
         </div>
@@ -159,153 +196,153 @@
         <figure>
             <img src="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Peluang%20Usaha%20Digital%202026:%20Panduan%20Lengkap%20dari%20Nol%20sampai%20Menghasilkan.png" 
                  alt="Peluang Usaha Digital 2026"
-                 onerror="this.src='https://placehold.co/800x450/2563eb/ffffff.png?text=Ilustrasi+Artikel'">
-            <figcaption>Peluang usaha digital yang bisa dimulai dari rumah</figcaption>
+                 onerror="this.src='https://placehold.co/800x450/2563eb/ffffff.png?text=Ilustrasi+Peluang+Usaha'">
+            <figcaption>Peluang usaha digital yang fleksibel dan bisa dimulai dari rumah.</figcaption>
         </figure>
 
-        <p><strong>Peluang usaha digital 2026</strong> bukan lagi sekadar tren—ini sudah menjadi kebutuhan. Banyak orang mulai beralih dari pekerjaan konvensional ke dunia digital karena lebih fleksibel dan berpotensi menghasilkan lebih besar.</p>
+        <p><strong>Peluang usaha digital 2026</strong> bukan lagi sekadar tren—ini sudah menjadi kebutuhan. Banyak orang mulai beralih dari pekerjaan konvensional ke dunia digital karena jauh lebih fleksibel dan berpotensi menghasilkan *income* yang lebih besar.</p>
 
-        <p>Kabar baiknya, Anda tidak perlu modal besar atau gelar tinggi. Bahkan warga belajar PKBM pun bisa memulai dari nol dan berkembang menjadi pengusaha digital sukses.</p>
+        <p>Kabar baiknya, Anda tidak perlu modal besar atau gelar sarjana tinggi. Bahkan warga belajar PKBM pun sangat bisa memulai dari nol dan berkembang menjadi pengusaha digital yang mandiri.</p>
 
-        <p>Artikel ini adalah <strong>panduan utama (pillar content)</strong> yang akan membimbing Anda dari tahap pemula hingga menghasilkan uang dari internet.</p>
+        <p>Artikel ini adalah <strong>panduan utama (pillar content)</strong> yang akan membimbing Anda langkah demi langkah, dari tahap pemula hingga berhasil menghasilkan uang dari internet.</p>
 
-        <hr>
-
-        <h2 id="daftar-isi">📌 Daftar Isi</h2>
-        <ul>
-            <li><a href="#tren">Tren Usaha Digital 2026</a></li>
-            <li><a href="#potensi">Potensi Penghasilan Digital</a></li>
-            <li><a href="#jenis">Jenis Usaha Digital Terbaik</a></li>
-            <li><a href="#strategi">Cara Memulai dari Nol</a></li>
-            <li><a href="#tools">Tools Gratis yang Wajib Digunakan</a></li>
-            <li><a href="#kesalahan">Kesalahan Pemula</a></li>
-            <li><a href="#roadmap">Roadmap 30 Hari</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-
-        <hr>
+        <div class="pembahasan" style="margin: 2rem 0;">
+            <h4 id="daftar-isi" style="margin-top: 0;">📌 Daftar Isi</h4>
+            <ul style="margin-bottom: 0;">
+                <li><a href="#tren">Tren Usaha Digital 2026</a></li>
+                <li><a href="#potensi">Potensi Penghasilan Digital</a></li>
+                <li><a href="#jenis">7 Jenis Usaha Digital Terbaik</a></li>
+                <li><a href="#strategi">Cara Memulai dari Nol</a></li>
+                <li><a href="#tools">Tools Gratis yang Wajib Digunakan</a></li>
+                <li><a href="#kesalahan">Kesalahan Fatal Pemula</a></li>
+                <li><a href="#roadmap">Roadmap 30 Hari</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
 
         <h2 id="tren">🔥 Tren Usaha Digital 2026</h2>
         <ul>
-            <li><strong>AI menggantikan pekerjaan manual</strong></li>
-            <li><strong>Konten jadi aset utama</strong></li>
-            <li><strong>Personal branding = sumber penghasilan</strong></li>
+            <li><strong>AI Membantu Eksekusi:</strong> Kecerdasan Buatan (AI) kini mengambil alih pekerjaan teknis, sehingga Anda bisa fokus pada strategi.</li>
+            <li><strong>Konten adalah Aset Utama:</strong> Bisnis tanpa konten akan sangat sulit ditemukan.</li>
+            <li><strong>Personal Branding = Cuan:</strong> Kepercayaan audiens terhadap individu jauh lebih kuat dibanding *brand* korporat.</li>
         </ul>
-        <p>Kesimpulannya: yang cepat belajar, dia yang menang.</p>
+        <blockquote>"Siapa yang paling cepat beradaptasi dengan teknologi, dialah yang akan memenangkan pasar."</blockquote>
 
         <h2 id="potensi">💰 Potensi Penghasilan Usaha Digital</h2>
-        <p>Berikut gambaran realistis:</p>
+        <p>Berikut adalah gambaran realistis tahapan penghasilan di dunia digital jika Anda konsisten:</p>
         <ul>
-            <li>Pemula: Rp500 ribu – Rp2 juta/bulan</li>
-            <li>Menengah: Rp3 juta – Rp10 juta</li>
-            <li>Lanjutan: Rp10 juta+ (tanpa batas)</li>
+            <li><strong>Pemula:</strong> Rp500.000 – Rp2.000.000/bulan (Fase belajar dan mencari klien/audiens pertama).</li>
+            <li><strong>Menengah:</strong> Rp3.000.000 – Rp10.000.000/bulan (Mulai stabil dan punya alur kerja).</li>
+            <li><strong>Lanjutan:</strong> Rp10.000.000+ (Fase *scale up* atau memperbesar jangkauan, nyaris tanpa batas).</li>
         </ul>
-        <p>Semua tergantung konsistensi dan skill.</p>
 
         <h2 id="jenis">🚀 7 Jenis Usaha Digital Paling Menjanjikan</h2>
 
         <h3>1. AI Content Creator</h3>
-        <p>Gunakan AI untuk membuat konten cepat dan murah.</p>
+        <p>Memanfaatkan tools AI untuk memproduksi konten dengan cepat dan menawarkannya sebagai jasa:</p>
         <ul>
-            <li>Artikel blog</li>
-            <li>Caption jualan</li>
-            <li>Video otomatis</li>
+            <li>Artikel blog SEO</li>
+            <li>*Caption* jualan media sosial</li>
+            <li>*Script* dan editing video otomatis</li>
         </ul>
 
         <h3>2. Affiliate Marketing</h3>
-        <p>Jual produk orang lain dan dapat komisi.</p>
+        <p>Menjual produk milik orang lain (tanpa perlu stok) dan mendapatkan komisi dari setiap penjualan:</p>
         <ul>
-            <li>TikTok Shop</li>
-            <li>Shopee Affiliate</li>
+            <li>TikTok Shop Affiliate</li>
+            <li>Shopee Affiliate Program</li>
         </ul>
 
         <h3>3. Jasa Desain Grafis</h3>
+        <p>Menyediakan layanan visual untuk bisnis UMKM yang baru melek digital:</p>
         <ul>
-            <li>Logo</li>
-            <li>Konten IG</li>
-            <li>Poster</li>
+            <li>Logo dan *branding*</li>
+            <li>Desain *feed* Instagram / TikTok</li>
+            <li>Poster promosi</li>
         </ul>
 
         <h3>4. Freelancer Online</h3>
+        <p>Menjual keahlian spesifik di *platform* seperti Fastwork, Fiverr, atau Upwork:</p>
         <ul>
-            <li>Penulis</li>
-            <li>Editor video</li>
-            <li>Admin sosmed</li>
+            <li>Penulis lepas (*Copywriter*)</li>
+            <li>Editor video (CapCut/Premiere)</li>
+            <li>Admin media sosial</li>
         </ul>
 
-        <h3>5. Jual Produk Digital</h3>
+        <h3>5. Menjual Produk Digital</h3>
+        <p>Membuat produk sekali, lalu bisa dijual berkali-kali tanpa biaya produksi tambahan:</p>
         <ul>
-            <li>Ebook</li>
-            <li>Template</li>
-            <li>Kursus</li>
+            <li>E-book panduan praktis</li>
+            <li>Template (Notion, Canva, Excel)</li>
+            <li>Kursus *online* (Webinar/Video)</li>
         </ul>
 
         <h3>6. Content Creator (TikTok / YouTube)</h3>
-        <p>Bangun audiens = bangun aset.</p>
+        <p>Membangun audiens setia di platform video pendek maupun panjang. Pendapatan datang dari Adsense, *endorsement*, atau jualan produk sendiri.</p>
 
         <h3>7. Dropshipping Digital</h3>
-        <p>Jualan tanpa stok barang.</p>
+        <p>Sistem jualan online di mana Anda tidak perlu menyetok atau mengirim barang; pesanan diteruskan langsung ke *supplier*.</p>
 
         <h2 id="strategi">🎯 Cara Memulai Usaha Digital dari Nol</h2>
         <ol>
-            <li>Pilih 1 fokus utama</li>
-            <li>Belajar dasar (YouTube / Google)</li>
-            <li>Praktik langsung (jangan lama teori)</li>
-            <li>Buat portofolio</li>
-            <li>Promosi setiap hari</li>
+            <li><strong>Pilih 1 Fokus Utama:</strong> Jangan maruk. Pilih satu bidang (misal: Affiliate) dan pelajari sampai bisa.</li>
+            <li><strong>Belajar Dasar:</strong> Manfaatkan tutorial gratis di YouTube atau Google.</li>
+            <li><strong>Praktik Langsung:</strong> Jangan terlalu lama terjebak di teori. Langsung eksekusi!</li>
+            <li><strong>Buat Portofolio:</strong> Tunjukkan hasil karya Anda (bisa dari *project* pura-pura atau *project* gratisan untuk teman).</li>
+            <li><strong>Promosi Setiap Hari:</strong> Gunakan media sosial Anda sebagai brosur digital.</li>
         </ol>
-        <p><strong>Rule penting:</strong> mulai dulu, sempurna belakangan.</p>
 
         <h2 id="tools">🛠 Tools Gratis yang Wajib Digunakan</h2>
         <ul>
-            <li>Canva → desain</li>
-            <li>ChatGPT → ide & konten</li>
-            <li>CapCut → edit video</li>
-            <li>Google Docs → menulis</li>
+            <li><strong>Canva:</strong> Untuk segala kebutuhan desain tanpa perlu mahir Photoshop.</li>
+            <li><strong>ChatGPT / Gemini:</strong> Sebagai asisten pribadi untuk mencari ide, merangkum, dan membuat teks.</li>
+            <li><strong>CapCut:</strong> Aplikasi edit video paling praktis di *smartphone* dan PC.</li>
+            <li><strong>Google Workspace (Docs/Drive):</strong> Untuk mengetik dan menyimpan data di awan (*cloud*).</li>
         </ul>
 
         <h2 id="kesalahan">❌ Kesalahan Fatal Pemula</h2>
         <ul>
-            <li>Menunggu sempurna</li>
-            <li>Tidak konsisten</li>
-            <li>Ganti niche terus</li>
-            <li>Fokus hasil, bukan proses</li>
+            <li>Terlalu lama menunggu momen atau alat yang "sempurna" sebelum mulai.</li>
+            <li>Tidak konsisten (semangat di minggu pertama, lalu menghilang).</li>
+            <li>Terus-menerus ganti bidang (*niche*) karena merasa tidak langsung laku.</li>
+            <li>Terlalu fokus mengejar hasil instan, bukan menikmati proses belajarnya.</li>
         </ul>
-        <p><strong>Solusi:</strong> fokus 1 jalur selama minimal 30 hari.</p>
-
-        <h2 id="roadmap">📅 Roadmap 30 Hari dari Nol</h2>
-        <p><strong>Minggu 1:</strong> belajar dasar</p>
-        <p><strong>Minggu 2:</strong> mulai posting konten</p>
-        <p><strong>Minggu 3:</strong> mulai cari klien / jualan</p>
-        <p><strong>Minggu 4:</strong> evaluasi & scale up</p>
-        <p>Jika konsisten, hasil pertama biasanya mulai terlihat.</p>
-
-        <h2 id="faq">❓ FAQ</h2>
         
-        <h3>Apakah bisa tanpa modal?</h3>
-        <p>Bisa, cukup HP dan internet.</p>
+        <div class="tip">
+            💡 <strong>Solusi:</strong> Disiplinkan diri Anda. Fokuslah pada 1 jalur yang Anda pilih selama minimal 30 hari penuh tanpa menoleh ke peluang lain.
+        </div>
 
-        <h3>Berapa lama bisa menghasilkan?</h3>
-        <p>1–3 bulan (tergantung konsistensi).</p>
+        <h2 id="roadmap">📅 Roadmap Eksekusi 30 Hari</h2>
+        <p><strong>Minggu 1:</strong> Fokus riset dan belajar ilmu dasar dari YouTube.</p>
+        <p><strong>Minggu 2:</strong> Mulai membuat dan memposting karya/konten pertama Anda.</p>
+        <p><strong>Minggu 3:</strong> Mulai proaktif mencari klien, menyebar *link affiliate*, atau *networking* online.</p>
+        <p><strong>Minggu 4:</strong> Evaluasi apa yang berhasil dan apa yang gagal, perbaiki, lalu lakukan *scale up*.</p>
 
-        <h3>Apakah cocok untuk pemula?</h3>
-        <p>Sangat cocok, bahkan direkomendasikan.</p>
+        <h2 id="faq">❓ FAQ (Tanya Jawab)</h2>
+        <div class="pembahasan">
+            <h4 style="margin-top: 0;">Apakah bisa memulai tanpa modal sepeser pun?</h4>
+            <p>Sangat bisa. Jika Anda sudah memiliki HP dan koneksi internet, itu adalah modal utama Anda. Gunakan aplikasi gratisan untuk mulai menghasilkan.</p>
 
-        <hr>
+            <h4>Berapa lama rata-rata waktu yang dibutuhkan untuk pecah telur (menghasilkan uang pertama)?</h4>
+            <p>Biasanya antara 1 hingga 3 bulan, sangat bergantung pada tingkat konsistensi dan kemauan Anda untuk mengevaluasi kesalahan.</p>
 
-        <h2>Kesimpulan</h2>
-        <p><strong>Dunia digital adalah peluang terbesar saat ini.</strong></p>
-        <p>Anda tidak perlu kaya untuk memulai, tapi Anda harus mulai untuk menjadi sukses.</p>
-        <p>Mulai dari kecil, konsisten setiap hari, dan dalam beberapa bulan hidup Anda bisa berubah.</p>
+            <h4 style="margin-bottom: 0;">Apakah ini cocok dikerjakan oleh pemula atau gaptek?</h4>
+            <p style="margin-bottom: 0;">Sangat cocok. Selama Anda memiliki kemauan untuk belajar dan membaca instruksi dasar, status "gaptek" perlahan akan hilang seiring dengan praktik harian.</p>
+        </div>
+
+        <div class="cta">
+            <h3 style="margin-top: 0;">Mulai Langkah Pertama Anda Sekarang!</h3>
+            <p><strong>Dunia digital adalah peluang terbesar abad ini.</strong> Anda tidak perlu terlahir kaya untuk memulai bisnis online, tapi Anda harus berani memulai untuk bisa meraih kesuksesan finansial. Mulai dari langkah kecil hari ini!</p>
+        </div>
 
         <hr>
 
         <h3>📚 Baca Juga (Cluster Artikel)</h3>
         <ul>
-            <li><a href="#">Cara Jadi Affiliate Pemula sampai Cuan</a></li>
-            <li><a href="#">Cara Buat Konten AI Viral</a></li>
-            <li><a href="#">Skill Digital Paling Dibutuhkan 2026</a></li>
-            <li><a href="#">Cara Dapat Uang dari TikTok Tanpa Modal</a></li>
+            <li><a href="#">Cara Jadi Affiliate Marketing Pemula sampai Cuan</a></li>
+            <li><a href="#">Panduan Membuat Konten Viral dengan Bantuan AI</a></li>
+            <li><a href="#">7 Skill Digital Paling Dibutuhkan di Tahun 2026</a></li>
+            <li><a href="#">Cara Mendapatkan Uang dari TikTok Tanpa Harus Joget</a></li>
         </ul>
 
     </article>
@@ -316,7 +353,7 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Tentang PKBM Digital</h4>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Portal independen yang menyediakan informasi seputar pendidikan nonformal, Kejar Paket A, B, C, serta panduan belajar mandiri untuk masyarakat Indonesia.</p>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Portal independen yang menyediakan informasi seputar pendidikan nonformal, Kejar Paket A, B, C, serta literasi digital untuk masyarakat Indonesia.</p>
             </div>
             <div class="footer-col">
                 <h4>Navigasi</h4>
