@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Panduan lengkap literasi digital 2026: cara melawan hoaks, menjaga keamanan data, dan membangun skill masa depan untuk kerja dan bisnis.">
     <meta name="keywords" content="literasi digital, anti hoaks, skill digital 2026, keamanan internet, cara menghindari penipuan online">
     <title>Manfaat Literasi Digital 2026: Anti Hoaks & Skill Masa Depan</title>
 
+    <link rel="canonical" href="https://pkbmcelahcahaya.edu.eu.org/artikel/literasi-digital.html">
+    <meta property="og:title" content="Manfaat Literasi Digital 2026: Anti Hoaks & Skill Masa Depan">
+    <meta property="og:description" content="Panduan lengkap literasi digital: cara melawan hoaks, menjaga keamanan data, dan membangun skill masa depan untuk kerja dan bisnis.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Manfaat%20Literasi%20Digital%202026:%20Anti%20Hoaks%20&%20Skill%20Masa%20Depan.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ================= VARIABEL & BASE ================= */
+        /* Global & Theme Variables */
         :root {
-            --primary: #2563eb;
+            --primary: #2563eb; 
             --primary-hover: #1d4ed8;
+            --accent: #8b5cf6;
             --bg: #f8fafc;
             --card: #ffffff;
             --text-main: #0f172a;
             --text-muted: #64748b;
             --border: #e2e8f0;
             --glass: rgba(255, 255, 255, 0.85);
+            
+            /* Custom Callout Colors (Light) */
+            --tip-bg: #eff6ff;
+            --tip-text: #1e3a8a;
+            --warning-bg: #fffbeb;
+            --warning-border: #f59e0b;
+            --warning-text: #92400e;
+            --box-bg: #f1f5f9;
         }
 
         .dark {
@@ -31,6 +48,13 @@
             --text-muted: #94a3b8;
             --border: #334155;
             --glass: rgba(30, 41, 59, 0.85);
+            
+            /* Custom Callout Colors (Dark) */
+            --tip-bg: rgba(37, 99, 235, 0.15);
+            --tip-text: #bfdbfe;
+            --warning-bg: rgba(245, 158, 11, 0.15);
+            --warning-text: #fde68a;
+            --box-bg: #0f172a;
         }
 
         * { box-sizing: border-box; transition: background 0.3s, border 0.3s, color 0.3s; }
@@ -44,8 +68,9 @@
         }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .article-container { max-width: 850px; margin: 3rem auto; }
 
-        /* ================= HEADER ================= */
+        /* Header Styles */
         header {
             position: sticky; top: 0; z-index: 100;
             background: var(--glass);
@@ -53,74 +78,86 @@
             border-bottom: 1px solid var(--border); padding: 1rem 0;
         }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-        .logo {
-            font-size: 1.5rem; font-weight: 700;
-            background: linear-gradient(45deg, var(--primary), #8b5cf6);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            text-decoration: none;
-        }
+        .logo { font-size: 1.5rem; font-weight: 700; background: linear-gradient(45deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
         .nav-links { display: flex; gap: 1.5rem; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; }
         .nav-links a:hover { color: var(--primary); }
         .header-actions { display: flex; align-items: center; gap: 1rem; }
         .mobile-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; padding: 0; }
-        .toggle-mode {
-            background: var(--border); border: none; padding: 0.5rem 1rem;
-            border-radius: 50px; cursor: pointer; font-weight: 600;
-            color: var(--text-main); display: flex; align-items: center; gap: 0.5rem;
-        }
+        .toggle-mode { background: var(--border); border: none; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; font-weight: 600; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem; }
 
-        /* ================= STYLING KHUSUS ARTIKEL ================= */
-        .article-wrapper {
-            max-width: 800px; /* Lebar ideal untuk membaca */
-            margin: 3rem auto;
-        }
+        /* Article Specific Styles */
         .card {
-            background: var(--card); border-radius: 20px; overflow: hidden;
-            border: 1px solid var(--border); padding: 2.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            background: var(--card); border-radius: 20px; padding: 3rem 2.5rem;
+            border: 1px solid var(--border); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
         }
-        
-        /* Tipografi Artikel */
-        .article-content h1 { font-size: 2.2rem; color: var(--text-main); line-height: 1.3; margin-top: 0; margin-bottom: 1rem; }
-        .article-content h2 { font-size: 1.6rem; color: var(--text-main); margin-top: 2.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
-        .article-content h3 { font-size: 1.3rem; color: var(--text-main); margin-top: 2rem; }
-        .article-content p { color: var(--text-main); font-size: 1.05rem; margin-bottom: 1.5rem; }
-        .article-content ul, .article-content ol { color: var(--text-main); margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.05rem; }
-        .article-content li { margin-bottom: 0.5rem; }
-        .article-content a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        .article-content a:hover { text-decoration: underline; }
-        .article-content hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
-        
-        /* Meta & Gambar */
-        .article-meta {
-            display: flex; align-items: center; gap: 1rem;
-            color: var(--text-muted); font-size: 0.9rem;
-            margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);
-        }
-        .article-content figure { margin: 2rem 0; text-align: center; }
-        .article-content img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
-        .article-content figcaption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; font-style: italic; }
 
-        /* ================= FOOTER ================= */
+        h1 { font-size: 2.2rem; line-height: 1.3; margin-top: 0; color: var(--text-main); }
+        h2 { margin-top: 2.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; color: var(--text-main); }
+        h3 { margin-top: 1.8rem; color: var(--text-main); }
+        h4 { margin-top: 1rem; color: var(--text-main); font-weight: 600; }
+        
+        .meta { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+        
+        figure { margin: 2rem 0; text-align: center; }
+        img { max-width: 100%; height: auto; border-radius: 12px; }
+        figcaption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.8rem; font-style: italic; }
+
+        ul, ol { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        p { margin-bottom: 1.2rem; }
+        hr { border: 0; height: 1px; background: var(--border); margin: 2.5rem 0; }
+        
+        strong { color: var(--text-main); }
+        a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; }
+
+        /* Custom Callouts & Boxes */
+        .tip {
+            background: var(--warning-bg);
+            color: var(--warning-text);
+            padding: 1.2rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--warning-border);
+            font-weight: 500;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary);
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--tip-bg);
+            color: var(--tip-text);
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .pembahasan { 
+            background: var(--box-bg); 
+            padding: 1.5rem; 
+            border-radius: 10px; 
+            margin-top: 1rem; 
+            border: 1px solid var(--border); 
+        }
+
+        .cta { background: var(--bg); padding: 2rem; border-radius: 12px; margin: 2.5rem 0; border: 1px solid var(--border); text-align: center; }
+
+        /* Footer */
         footer { background: var(--card); border-top: 1px solid var(--border); padding: 3rem 0; margin-top: 4rem; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
         .footer-col h4 { margin-top: 0; color: var(--text-main); }
-        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .footer-col a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 400; }
         .footer-col a:hover { color: var(--primary); }
         .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 
-        /* Responsive Mobile */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .mobile-toggle { display: block; }
-            .nav-links {
-                display: none; position: absolute; top: 100%; left: 0; right: 0;
-                background: var(--card); flex-direction: column; padding: 1rem;
-                border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--card); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
             .nav-links.active { display: flex; }
+            h1 { font-size: 1.8rem; }
             .card { padding: 1.5rem; }
-            .article-content h1 { font-size: 1.7rem; }
         }
     </style>
 </head>
@@ -146,12 +183,12 @@
     </div>
 </header>
 
-<main class="container article-wrapper">
-    <article class="card article-content">
+<main class="container article-container">
+    <article class="card">
         
         <h1>Manfaat Literasi Digital: Panduan Lengkap Anti Hoaks & Skill Masa Depan</h1>
         
-        <div class="article-meta">
+        <div class="meta">
             <span>✍️ Ditulis oleh: Penggerak Literasi</span>
             <span>📅 Update: 25 Maret 2026</span>
         </div>
@@ -159,8 +196,8 @@
         <figure>
             <img src="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Manfaat%20Literasi%20Digital%202026:%20Anti%20Hoaks%20&%20Skill%20Masa%20Depan.png" 
                  alt="Manfaat Literasi Digital"
-                 onerror="this.src='https://placehold.co/800x450/2563eb/ffffff.png?text=Ilustrasi+Artikel'">
-            <figcaption>Literasi digital sebagai bekal penting di era modern</figcaption>
+                 onerror="this.src='https://placehold.co/800x450/2563eb/ffffff.png?text=Ilustrasi+Literasi+Digital'">
+            <figcaption>Literasi digital sebagai bekal penting di era modern untuk kehidupan dan karier.</figcaption>
         </figure>
 
         <p><strong>Literasi digital</strong> kini menjadi kemampuan wajib di era modern. Bukan hanya untuk pelajar, tetapi juga untuk masyarakat umum, termasuk warga belajar PKBM.</p>
@@ -169,115 +206,112 @@
 
         <p>Artikel ini adalah <strong>panduan utama (pillar content)</strong> untuk membantu Anda memahami literasi digital secara mendalam—dari melawan hoaks hingga membangun skill masa depan.</p>
 
-        <hr>
-
-        <h2 id="daftar-isi">📌 Daftar Isi</h2>
-        <ul>
-            <li><a href="#apa">Apa Itu Literasi Digital?</a></li>
-            <li><a href="#penting">Mengapa Literasi Digital Penting?</a></li>
-            <li><a href="#hoaks">Cara Melawan Hoaks</a></li>
-            <li><a href="#keamanan">Keamanan Digital</a></li>
-            <li><a href="#skill">Skill Digital Masa Depan</a></li>
-            <li><a href="#tips">Tips Praktis Harian</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-
-        <hr>
+        <div class="pembahasan" style="margin: 2rem 0;">
+            <h4 id="daftar-isi" style="margin-top: 0;">📌 Daftar Isi</h4>
+            <ul style="margin-bottom: 0;">
+                <li><a href="#apa">Apa Itu Literasi Digital?</a></li>
+                <li><a href="#penting">Mengapa Literasi Digital Penting?</a></li>
+                <li><a href="#hoaks">Cara Melawan Hoaks</a></li>
+                <li><a href="#keamanan">Keamanan Digital</a></li>
+                <li><a href="#skill">Skill Digital Masa Depan</a></li>
+                <li><a href="#tips">Tips Praktis Harian</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
 
         <h2 id="apa">📖 Apa Itu Literasi Digital?</h2>
         <p>Literasi digital adalah kemampuan untuk:</p>
         <ul>
-            <li>Mengakses informasi</li>
-            <li>Memahami isi konten</li>
-            <li>Mengevaluasi kebenaran informasi</li>
-            <li>Menggunakan teknologi secara bijak</li>
+            <li>Mengakses informasi dengan efisien.</li>
+            <li>Memahami isi konten secara komprehensif.</li>
+            <li>Mengevaluasi kebenaran dan kredibilitas informasi.</li>
+            <li>Menggunakan teknologi secara bijak dan bertanggung jawab.</li>
         </ul>
-        <p>Jadi, bukan hanya bisa menggunakan HP atau media sosial, tapi juga mampu berpikir kritis.</p>
+        <p>Jadi, literasi digital bukan sekadar kemampuan mengoperasikan *smartphone* atau media sosial, melainkan kemampuan berpikir kritis di ruang maya.</p>
 
         <h2 id="penting">🔥 Mengapa Literasi Digital Sangat Penting?</h2>
         <ul>
-            <li>Melindungi dari hoaks dan penipuan</li>
-            <li>Meningkatkan peluang kerja</li>
-            <li>Membantu belajar lebih cepat</li>
-            <li>Membuka peluang usaha digital</li>
+            <li><strong>Perlindungan Diri:</strong> Melindungi Anda dari hoaks, penipuan online (*scam*), dan pencurian data.</li>
+            <li><strong>Karier:</strong> Meningkatkan peluang kerja karena hampir semua profesi kini membutuhkan keterampilan digital.</li>
+            <li><strong>Pendidikan:</strong> Membantu proses belajar mandiri menjadi jauh lebih cepat dan luas.</li>
+            <li><strong>Ekonomi:</strong> Membuka peluang usaha digital seperti jualan online atau *freelance*.</li>
         </ul>
-        <p>Tanpa literasi digital, seseorang mudah tertipu dan tertinggal.</p>
 
         <h2 id="hoaks">🛑 Cara Melawan Hoaks di Internet</h2>
-        <p>Hoaks adalah salah satu ancaman terbesar di dunia digital.</p>
+        <p>Hoaks atau berita bohong adalah salah satu ancaman terbesar di dunia digital yang bisa memicu perpecahan hingga kerugian finansial.</p>
         
         <h3>Ciri-ciri hoaks:</h3>
         <ul>
-            <li>Judul sensasional</li>
-            <li>Sumber tidak jelas</li>
-            <li>Memancing emosi</li>
+            <li>Menggunakan judul yang terlalu sensasional atau provokatif.</li>
+            <li>Sumber informasi tidak jelas (berasal dari *forward* pesan berantai tanpa link berita resmi).</li>
+            <li>Cenderung memancing emosi negatif (marah, takut, atau sedih berlebihan).</li>
         </ul>
 
         <h3>Cara menghindari:</h3>
         <ul>
-            <li>Cek sumber berita</li>
-            <li>Bandingkan dengan media terpercaya</li>
-            <li>Jangan langsung share</li>
+            <li>Cek sumber berita melalui mesin pencari terpercaya.</li>
+            <li>Bandingkan informasi dengan media arus utama (*mainstream media*) yang kredibel.</li>
+            <li>Tahan jari Anda, jangan langsung menekan tombol *share*.</li>
         </ul>
-        <p><strong>Prinsip utama:</strong> saring sebelum sharing.</p>
+        
+        <div class="tip">
+            💡 <strong>Prinsip Utama:</strong> Selalu terapkan prinsip <strong>"Saring Sebelum Sharing"</strong>. Jika Anda ragu dengan kebenaran sebuah informasi, lebih baik berhenti di Anda.
+        </div>
 
         <h2 id="keamanan">🔐 Keamanan Digital (Wajib Dikuasai)</h2>
-        <p>Selain hoaks, ancaman lain adalah pencurian data.</p>
+        <p>Selain hoaks, ancaman nyata lainnya adalah pencurian data pribadi (phishing) dan peretasan akun.</p>
         
-        <h3>Tips keamanan:</h3>
+        <h3>Tips keamanan dasar:</h3>
         <ul>
-            <li>Gunakan password kuat</li>
-            <li>Jangan klik link sembarangan</li>
-            <li>Aktifkan verifikasi 2 langkah</li>
-            <li>Jangan bagikan data pribadi</li>
+            <li>Gunakan kombinasi *password* yang kuat (huruf, angka, simbol) dan berbeda untuk setiap akun penting.</li>
+            <li>Jangan pernah mengklik tautan (link) sembarangan yang dikirim oleh nomor tak dikenal.</li>
+            <li>Aktifkan fitur <strong>Verifikasi 2 Langkah (2FA)</strong> di WhatsApp, Email, dan Media Sosial.</li>
+            <li>Jangan membagikan foto KTP, KK, atau kode OTP kepada siapa pun.</li>
         </ul>
-        <p>Keamanan digital = perlindungan diri di dunia online.</p>
 
         <h2 id="skill">🚀 Skill Digital Masa Depan</h2>
-        <p>Literasi digital juga membuka peluang karier.</p>
+        <p>Literasi digital bukan hanya soal bertahan, tapi juga berkembang. Berikut adalah beberapa skill yang wajib mulai Anda pelajari untuk prospek karier 2026:</p>
         
-        <h3>Skill yang wajib dipelajari:</h3>
         <ul>
-            <li>Penggunaan AI tools</li>
-            <li>Digital marketing</li>
-            <li>Content creation</li>
-            <li>Komunikasi online profesional</li>
-        </ul>
-        <p>Anda bisa membaca lebih lanjut di <a href="#">artikel peluang usaha digital</a>.</p>
-
-        <h2 id="tips">💡 Tips Literasi Digital Sehari-hari</h2>
-        <ul>
-            <li>Batasi konsumsi konten negatif</li>
-            <li>Gunakan internet untuk belajar</li>
-            <li>Ikuti akun edukatif</li>
-            <li>Biasakan berpikir kritis</li>
+            <li><strong>Penggunaan AI Tools:</strong> Mampu memanfaatkan Kecerdasan Buatan (seperti ChatGPT atau Gemini) untuk mempermudah pekerjaan.</li>
+            <li><strong>Digital Marketing:</strong> Kemampuan memasarkan produk melalui media sosial atau *marketplace*.</li>
+            <li><strong>Content Creation:</strong> Kemampuan membuat teks, gambar, atau video yang menarik dan bernilai.</li>
+            <li><strong>Komunikasi Profesional Online:</strong> Tata krama mengirim email dan berkolaborasi secara virtual.</li>
         </ul>
 
-        <h2 id="faq">❓ FAQ</h2>
+        <h2 id="tips">💡 Tips Praktis Harian</h2>
+        <ul>
+            <li>Batasi konsumsi konten negatif (doomscrolling) yang merusak fokus.</li>
+            <li>Gunakan internet 80% untuk hal produktif/belajar dan 20% untuk hiburan.</li>
+            <li>Ikuti (follow) akun-akun edukatif yang menambah wawasan Anda.</li>
+            <li>Selalu tanyakan <em>"Apakah ini masuk akal?"</em> setiap kali membaca berita bombastis.</li>
+        </ul>
+
+        <h2 id="faq">❓ FAQ (Tanya Jawab Seputar Literasi Digital)</h2>
         
-        <h3>Apa manfaat utama literasi digital?</h3>
-        <p>Melindungi dari hoaks dan meningkatkan skill kerja.</p>
+        <div class="pembahasan">
+            <h4 style="margin-top: 0;">Apa manfaat utama literasi digital?</h4>
+            <p>Manfaat utamanya adalah melindungi diri Anda dari kejahatan siber (hoaks, penipuan) dan membuka pintu untuk meningkatkan skill kerja serta ekonomi.</p>
 
-        <h3>Apakah literasi digital penting untuk orang dewasa?</h3>
-        <p>Sangat penting, bahkan lebih dibutuhkan.</p>
+            <h4>Apakah literasi digital penting untuk orang dewasa?</h4>
+            <p>Sangat penting! Seringkali, orang dewasalah yang paling rentan menjadi korban penipuan online karena kurangnya pemahaman dasar tentang keamanan digital.</p>
 
-        <h3>Bagaimana cara belajar literasi digital?</h3>
-        <p>Mulai dari membaca, praktik, dan mengikuti pelatihan online.</p>
+            <h4 style="margin-bottom: 0;">Bagaimana cara mulai belajar literasi digital?</h4>
+            <p style="margin-bottom: 0;">Mulai dari hal sederhana: baca panduan keamanan online, praktikkan cara mengecek fakta berita, dan ikut pelatihan gratis yang sering diadakan oleh Kominfo atau PKBM.</p>
+        </div>
+
+        <div class="cta">
+            <h3 style="margin-top: 0;">Mulai Bangun Masa Depan Anda Hari Ini</h3>
+            <p><strong>Literasi digital adalah kunci masa depan.</strong> Dengan kemampuan ini, Anda tidak hanya aman dari hoaks, tetapi juga siap menghadapi dunia kerja dan bisnis digital yang kompetitif. Mulai biasakan berpikir kritis dari hal kecil hari ini!</p>
+        </div>
 
         <hr>
 
-        <h2>Kesimpulan</h2>
-        <p><strong>Literasi digital adalah kunci masa depan.</strong></p>
-        <p>Dengan kemampuan ini, Anda tidak hanya aman dari hoaks, tetapi juga siap menghadapi dunia kerja dan bisnis digital.</p>
-        <p>Mulai dari hal kecil hari ini, dan Anda akan merasakan dampaknya di masa depan.</p>
-
-        <hr>
-
-        <h3>📚 Baca Juga</h3>
+        <h3>📚 Rekomendasi Bacaan Lainnya</h3>
         <ul>
-            <li><a href="#">Cara Menghindari Penipuan Online</a></li>
-            <li><a href="#">Skill Digital yang Wajib Dipelajari 2026</a></li>
-            <li><a href="#">Cara Menghasilkan Uang dari Internet</a></li>
+            <li><a href="#">Cara Ampuh Menghindari Penipuan Online (Scam & Phishing)</a></li>
+            <li><a href="#">7 Skill Digital yang Wajib Dipelajari di Tahun 2026</a></li>
+            <li><a href="#">Panduan Membangun Bisnis Dropship Tanpa Modal</a></li>
         </ul>
 
     </article>
@@ -288,7 +322,7 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Tentang PKBM Digital</h4>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Portal independen yang menyediakan informasi seputar pendidikan nonformal, Kejar Paket A, B, C, serta panduan belajar mandiri untuk masyarakat Indonesia.</p>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Portal independen yang menyediakan informasi seputar pendidikan nonformal, Kejar Paket A, B, C, serta literasi digital untuk masyarakat Indonesia.</p>
             </div>
             <div class="footer-col">
                 <h4>Navigasi</h4>
