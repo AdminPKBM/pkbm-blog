@@ -1,153 +1,225 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <title>Peta UTBK 2026: Prodi Ekonomi-Bisnis Ketat vs Peluang Besar</title>
     <meta name="description" content="Peta UTBK 2026 prodi ekonomi-bisnis dari paling ketat hingga peluang terbesar. Strategi memilih jurusan SNBT agar peluang lolos meningkat.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --primary:#2563eb;
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#64748b;
+    --border:#e2e8f0;
+}
 
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            margin: 0;
-            background: #f8fafc;
-            color: #0f172a;
-            line-height: 1.7;
-        }
+.dark {
+    --bg:#020617;
+    --card:#1e293b;
+    --text:#f1f5f9;
+    --muted:#94a3b8;
+    --border:#334155;
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 1.5rem;
-        }
+*{box-sizing:border-box}
 
-        .card {
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 14px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
+body{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
 
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
+/* Layout */
+.container{max-width:1100px;margin:auto;padding:0 1.5rem;}
+.article-container{max-width:850px;margin:3rem auto;}
 
-        h2 {
-            margin-top: 2.2rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.4rem;
-        }
+/* Header */
+header{
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+}
 
-        h3 {
-            margin-top: 1.5rem;
-        }
+.nav-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 0;
+}
 
-        p {
-            margin-bottom: 1rem;
-        }
+.logo{
+    font-weight:700;
+    font-size:1.4rem;
+    text-decoration:none;
+    color:var(--primary);
+}
 
-        ul {
-            padding-left: 1.4rem;
-            margin-bottom: 1rem;
-        }
+.nav-links{
+    display:flex;
+    gap:1.5rem;
+}
 
-        li {
-            margin-bottom: 0.4rem;
-        }
+.nav-links a{
+    text-decoration:none;
+    color:var(--text);
+}
 
-        figure {
-            margin: 1.5rem 0;
-        }
+.nav-links a:hover{color:var(--primary)}
 
-        img {
-            width: 100%;
-            border-radius: 10px;
-        }
+.mobile-toggle{display:none;background:none;border:none;font-size:1.5rem}
 
-        figcaption {
-            font-size: 0.85rem;
-            color: #64748b;
-            text-align: center;
-            margin-top: 0.5rem;
-            font-style: italic;
-        }
+.toggle-mode{
+    background:var(--border);
+    border:none;
+    padding:0.5rem 1rem;
+    border-radius:50px;
+    cursor:pointer;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
+/* Article */
+.card{
+    background:var(--card);
+    padding:2.5rem;
+    border-radius:16px;
+    border:1px solid var(--border);
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
 
-        th, td {
-            border: 1px solid #e2e8f0;
-            padding: 0.6rem;
-        }
+h1{font-size:2.3rem;margin-bottom:1rem}
+h2{margin-top:2.5rem;border-bottom:2px solid var(--border);padding-bottom:0.5rem}
+h3{margin-top:1.5rem}
 
-        .ad {
-            margin: 2rem 0;
-            text-align: center;
-            border: 1px dashed #e2e8f0;
-            padding: 1rem;
-            border-radius: 10px;
-            background: #ffffff;
-        }
+.meta{color:var(--muted);margin-bottom:1.5rem}
 
-        .tip {
-            background: #fee2e2;
-            padding: 1rem;
-            border-left: 4px solid #ef4444;
-            margin: 1.5rem 0;
-            border-radius: 8px;
-        }
+figure{text-align:center;margin:2rem 0}
+img{max-width:100%;border-radius:12px}
+figcaption{font-size:0.9rem;color:var(--muted)}
 
-        a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 600;
-        }
+.tip{
+    background:#fee2e2;
+    border-left:4px solid red;
+    padding:1rem;
+    border-radius:8px;
+    margin:1.5rem 0;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+.cta{
+    background:#f1f5f9;
+    padding:1.5rem;
+    border-radius:10px;
+    text-align:center;
+    margin:2rem 0;
+}
+
+.ad-container{
+    margin:2rem 0;
+    text-align:center;
+    border:1px dashed var(--border);
+    padding:1rem;
+    border-radius:10px;
+}
+
+/* Footer */
+footer{
+    background:var(--card);
+    border-top:1px solid var(--border);
+    padding:3rem 0;
+    margin-top:4rem;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:2rem;
+    margin-bottom:2rem;
+}
+
+.footer-col a{
+    display:block;
+    text-decoration:none;
+    color:var(--muted);
+    margin-bottom:0.5rem;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid var(--border);
+    padding-top:1.5rem;
+    color:var(--muted);
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        left:0;
+        right:0;
+        background:var(--card);
+        padding:1rem;
+    }
+
+    .nav-links.active{display:flex}
+    .mobile-toggle{display:block}
+}
+</style>
 </head>
 
 <body>
 
-<main class="container">
+<!-- HEADER -->
+<header>
+<div class="container nav-wrapper">
+    <a href="../index.html" class="logo">PKBM Digital</a>
+
+    <nav class="nav-links" id="nav-menu">
+        <a href="../index.html">Beranda</a>
+        <a href="#">UTBK</a>
+        <a href="#">Paket C</a>
+        <a href="#">Skill Digital</a>
+        <a href="../about.html">Tentang</a>
+    </nav>
+
+    <div>
+        <button class="toggle-mode" onclick="toggleDark()">🌙</button>
+        <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+</div>
+</header>
+
+<!-- CONTENT -->
+<main class="container article-container">
 <article class="card">
 
-<h1>Peta UTBK 2026: Prodi Ekonomi-Bisnis dari Ketat hingga Peluang Besar</h1>
+<h1>📊 Peta UTBK 2026: Prodi Ekonomi-Bisnis dari Ketat hingga Peluang Besar</h1>
+
+<div class="meta">Update SNBT 2026</div>
 
 <figure>
-    <img src="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Peta%20UTBK%202026%3A%20Prodi%20Ekonomi-Bisnis%20Ketat%20vs%20Peluang%20Besar.png"
-         alt="Peta UTBK 2026 Prodi Ekonomi Bisnis"
-         onerror="this.src='https://placehold.co/800x450/2563eb/ffffff?text=UTBK+2026'">
-    <figcaption>Peta persaingan UTBK 2026 membantu menentukan strategi memilih jurusan dengan peluang terbaik.</figcaption>
+<img src="https://raw.githubusercontent.com/AdminPKBM/pkbm-blog/main/img/Peta%20UTBK%202026%3A%20Prodi%20Ekonomi-Bisnis%20Ketat%20vs%20Peluang%20Besar.png">
+<figcaption>Peta persaingan UTBK membantu menentukan strategi memilih jurusan.</figcaption>
 </figure>
 
-<p><strong>Meta Description:</strong> Peta UTBK 2026 prodi ekonomi-bisnis dari rasio 1:50 hingga 1:1. Temukan strategi memilih jurusan agar peluang lolos SNBT meningkat.</p>
+<p>Banyak peserta UTBK gagal bukan karena nilai rendah, tetapi karena <strong>salah strategi memilih jurusan</strong>.</p>
 
-<p>Banyak peserta UTBK 2026 mengalami dilema besar saat memilih jurusan ekonomi-bisnis. Jurusan populer memang terlihat menjanjikan, tetapi persaingannya sangat tinggi.</p>
+<div class="tip">⚠️ Rasio bisa mencapai 1:50. Tanpa strategi, peluang sangat kecil.</div>
 
-<p>Beberapa prodi bahkan memiliki rasio hingga <strong>1:50</strong>. Artinya, hanya sedikit yang berhasil lolos jika tanpa strategi yang tepat.</p>
-
-<div class="tip">
-⚠️ Banyak peserta gagal bukan karena nilai rendah, tetapi karena salah strategi memilih jurusan.
-</div>
-
-<h2>Apa Itu Peta UTBK 2026?</h2>
-<p>Peta UTBK adalah analisis rasio antara jumlah pendaftar dan daya tampung suatu program studi.</p>
+<h2>Apa Itu Peta UTBK?</h2>
+<p>Peta UTBK adalah perbandingan pendaftar dan daya tampung.</p>
 
 <ul>
 <li>1:50 → sangat ketat</li>
@@ -157,69 +229,90 @@
 <li>1:1 → peluang besar</li>
 </ul>
 
-<h2>Mengapa Ini Penting?</h2>
+<h2>Prodi Paling Ketat</h2>
 <ul>
-<li>Persaingan meningkat setiap tahun</li>
-<li>Strategi lebih penting dari nilai</li>
-<li>Banyak peluang tersembunyi di kampus tertentu</li>
+<li>Manajemen</li>
+<li>Akuntansi</li>
+<li>Bisnis Digital</li>
 </ul>
 
-<div class="ad">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-4454451699877502"
-         data-ad-slot="GANTI_SLOT"
-         data-ad-format="auto"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<h2>Prodi Peluang Besar</h2>
+<ul>
+<li>Ekonomi Pembangunan</li>
+<li>Ekonomi Syariah</li>
+<li>PTN wilayah timur</li>
+</ul>
+
+<div class="ad-container">
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-4454451699877502"
+data-ad-slot="GANTI_SLOT_ANDA"
+data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
-<h2>Peta Persaingan UTBK 2026</h2>
-
-<h3>Prodi Paling Ketat</h3>
-<ul>
-<li>Manajemen: hingga 1:51</li>
-<li>Akuntansi: hingga 1:48</li>
-<li>Administrasi Bisnis: hingga 1:40</li>
-</ul>
-
-<h3>Prodi Paling Terbuka</h3>
-<ul>
-<li>Ekonomi daerah: 1:4–1:8</li>
-<li>PTN wilayah timur: mendekati 1:1</li>
-</ul>
-
-<h2>Strategi Lolos UTBK 2026</h2>
+<h2>Strategi Lolos</h2>
 
 <h3>1. Analisis Nilai</h3>
-<p>Bandingkan nilai tryout dengan target kampus agar tidak overestimate.</p>
+<p>Bandingkan dengan target kampus.</p>
 
-<h3>2. Gunakan Strategi Kombinasi</h3>
-<p>Pilih 1 prodi ketat, 1 menengah, dan 1 aman.</p>
+<h3>2. Kombinasi Jurusan</h3>
+<p>Pilih ketat, sedang, aman.</p>
 
-<h3>3. Hindari Tren Viral</h3>
-<p>Jurusan yang viral biasanya mengalami lonjakan peminat drastis.</p>
+<h3>3. Hindari Tren</h3>
+<p>Jurusan viral biasanya penuh.</p>
 
-<div class="ad">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-4454451699877502"
-         data-ad-slot="GANTI_SLOT"
-         data-ad-format="auto"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<div class="cta">
+🔥 Strategi lebih penting dari sekadar nilai tinggi.
 </div>
 
 <h2>Kesimpulan</h2>
-<p>Peta UTBK 2026 menunjukkan bahwa keberhasilan tidak hanya ditentukan oleh nilai, tetapi juga strategi memilih jurusan.</p>
-
-<p>Gunakan data, bukan sekadar insting, untuk meningkatkan peluang lolos.</p>
-
-<p>Baca panduan lengkap lainnya di 
-<a href="https://www.kangruli.web.id/" target="_blank">website edukasi UTBK</a></p>
-
-<p><strong>Keyword:</strong> peta UTBK 2026, prodi ekonomi bisnis SNBT, rasio UTBK terbaru, peluang lolos SNBT, strategi memilih jurusan, jurusan manajemen UTBK, akuntansi SNBT 2026, prodi paling ketat UTBK, kampus peluang besar SNBT, tips lolos UTBK</p>
+<p>Peta UTBK 2026 menunjukkan bahwa strategi adalah kunci utama.</p>
 
 </article>
 </main>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+
+<div class="footer-grid">
+<div>
+<h4>PKBM Digital</h4>
+<p>Portal edukasi PKBM & UTBK.</p>
+</div>
+
+<div>
+<h4>Navigasi</h4>
+<a href="../index.html">Beranda</a>
+<a href="#">UTBK</a>
+<a href="#">Paket C</a>
+</div>
+
+<div>
+<h4>Legal</h4>
+<a href="#">Privacy Policy</a>
+<a href="#">Disclaimer</a>
+</div>
+</div>
+
+<div class="footer-bottom">
+© 2026 PKBM Digital
+</div>
+
+</div>
+</footer>
+
+<script>
+function toggleDark(){
+    document.body.classList.toggle('dark');
+}
+
+function toggleMenu(){
+    document.getElementById('nav-menu').classList.toggle('active');
+}
+</script>
 
 </body>
 </html>
